@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <style>
+        .g {
+            /* position: absolute; */
+            left: 450px;
+            margin: 20px;
+            /* bottom: 40px; */
+            display: block;
+            width: 150px;
+            height: 45px;
+            font: 900 25px '';
+            text-decoration: none;
+            line-height: 50px;
+            border-radius: 20px;
+            background-image: linear-gradient(to right, rgba(240, 192, 169, 255), rgba(247, 145, 140, 255));
+            text-align: center;
+        }
+
+
+        /* ul {
+            margin: 0 -7px
+        }
+
+        li {
+            width: 50%;
+            display: block;
+            float: left
+        }
+
+        li a {
+            display: block;
+            height: 100%;
+            width: 100%;
+            vertical-align: middle
+        } */
+
+        .item-box {
+            margin: 0 7px 15px;
+            position: relative;
+            padding: 32px;
+            display: block;
+            background: #f5f5f5
+        }
+
+        .prod-img {
+            width: 49%;
+            height: 247px;
+            line-height: 247px;
+            float: left;
+            text-align: center;
+            overflow: hidden
+        }
+
+        .prod-img img {
+            width: 150px;
+            height: 150px;
+            vertical-align: middle
+        }
+
+        .prod-img img {
+            margin: 0 auto;
+            vertical-align: middle
+        }
+
+        .prod-desc {
+            height: 247px;
+            margin-left: 0;
+            position: relative;
+            width: 50%;
+            float: right
+        }
+
+        .prod-top {
+            margin-bottom: 1.5rem
+        }
+
+        .prod-title {
+            margin-bottom: 16px
+        }
+
+        .prod-title h1 {
+            display: block;
+            font-weight: 400;
+            font-size: 20px;
+            position: relative
+        }
+
+        .prod-title h1 span {
+            border-radius: 10px;
+            height: 20px;
+            line-height: 21px;
+            padding: 3px 8px;
+            overflow: hidden;
+            position: relative;
+            top: -2px;
+            background: #dfd5b7;
+            color: #fff;
+            font-size: 13px
+        }
+
+        .prod-title p {
+            display: block;
+            color: #546c9e
+        }
+
+        .prod-gongneng {
+            color: #777;
+            margin-bottom: 13px;
+            height: 68px;
+            overflow: hidden
+        }
+
+        .prod-price i {
+            display: inline-block;
+            font-style: normal;
+            font-size: 1rem;
+            padding-right: 5px
+        }
+
+        .prod-link {
+            width: 110%;
+            position: absolute;
+            left: 0;
+            bottom: 0
+        }
+
+        .prod-link a {
+            display: inline-block;
+            height: 40px;
+            width: 115px;
+            line-height: 40px;
+            font-size: 1rem;
+            border-radius: 20px;
+            text-align: center;
+            margin-right: 15px;
+            background: #838383;
+            color: #fff
+        }
+
+        .prod-link a.buy {
+            background: #546c9e;
+            margin-right: 0
+        }
+
+        .prod-link a:hover {
+            background: #5d7fc8
+        }
+
+        .item-box:hover .prod-img img {
+            transform: scale(1.1);
+            -webkit-transform: scale(1.1);
+            -moz-transform: scale(1.1)
+        }
+
+        .clr::after,
+        .clr:after {
+            content: "";
+            display: block;
+            height: 0;
+            clear: both;
+            overflow: hidden
+        }
+    </style>
+</head>
+
+<body>
+<div class="wrap">
+    <div class="nav">
+        <div class="btn">
+            <div class="btn-item"></div>
+            <div class="btn-item"></div>
+            <div class="btn-item"></div>
+        </div>
+        <div class="icon">
+            <div class="icon-img"><img src="/home/bxiiiiii/Downloads/Telegram Desktop/pic.jpg"></div>
+            <div class="icon-con">
+                <p>Xiong Junjie</p>
+                <h2>School of Computer Software 2003</h2>
+            </div>
+        </div>
+        <div class="line"></div>
+        <div class="title">
+            <p>Query</p>
+        </div>
+        <div class="menu">
+            <a href="../DeviceManege.html">
+                <div class="item">
+                    <div class="light"></div>
+                    <div class="licon"><img src="/home/bxiiiiii/img-src/user.png" height="50" width="50"></div>
+                    <div class="con">设备管理</div>
+                    <div class="ricon"></div>
+                </div>
+            </a>
+            <a href="../DataManage.html">
+                <div class="item">
+                    <div class="light"></div>
+                    <div class="licon"><img src="/home/bxiiiiii/img-src/schedule.png" height="50" width="50"></div>
+                    <div class="con">数据信息管理</div>
+                    <div class="ricon"></div>
+                </div>
+            </a>
+            <a href="../ApplianceControl.html">
+                <div class="item">
+                    <div class="light"></div>
+                    <div class="licon"><img src="/home/bxiiiiii/img-src/score.png" height="50" width="50"></div>
+                    <div class="con">家电控制</div>
+                    <div class="ricon"></div>
+                </div>
+            </a>
+            <a href="../VideoMonitor.html">
+                <div class="item">
+                    <div class="light"></div>
+                    <div class="licon"><img src="/home/bxiiiiii/img-src/exam.png" height="50" width="50"></div>
+                    <div class="con">视频监控</div>
+                    <div class="ricon"></div>
+                </div>
+            </a>
+            <a href="../Message.html">
+                <div class="item">
+                    <div class="light"></div>
+                    <div class="licon"><img src="/home/bxiiiiii/img-src/open-book.png" height="50" width="50"></div>
+                    <div class="con">消息推送</div>
+                    <div class="ricon"></div>
+                </div>
+            </a>
+            <a href="../Login.html">
+                <div class="item">
+                    <div class="light"></div>
+                    <div class="licon"><img src="/home/bxiiiiii/img-src/credits.png" height="50" width="50"></div>
+                    <div class="con">退出</div>
+                    <div class="ricon"></div>
+                </div>
+            </a>
+        </div>
+        <div class="line"></div>
+    </div>
+    <div class="rig">
+        <button class="g">添加设备</button>
+        <div id="container">
+            <div class="product-list">
+                <ul>
+                    <li>
+                        <div class="item-box clr">
+                            <div class="prod-img">
+                                <a href="/cn/productDetail/d7_3">
+                                    <img src="./img/1.png" width="347" height="347" />
+                                </a>
+                            </div>
+                            <div class="prod-desc">
+                                <div class="prod-top">
+                                    <a href="/cn/productDetail/d7_3">
+                                        <div class="prod-title">
+                                            <h1>智能晾衣机 </h1>
+                                            <p>智能晾晒，晾衣收衣更省心</p>
+                                        </div>
+                                        <div class="prod-gongneng"></br></br>Last time:2022/8/20
+                                        </div>
+
+                                    </a>
+                                </div>
+                                <div class="prod-link">
+                                    <a href="/cn/productDetail/d7_3">DELETE</a>
+                                    <!-- <a href="https://item.jd.com/100003680129.html" target="_blank"
+                                                    class="buy">立即购买</a>
+                                            </div> -->
+                                </div>
+                                <div class="cler"></div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item-box clr">
+                            <div class="prod-img">
+                                <a href="/cn/productDetail/d7_2">
+                                    <img src="https://cdn.aqara.com/cdn/website/static/lodash-4.17.15/智能窗帘电机B1.png"
+                                         width="247" height="247" />
+                                </a>
+                            </div>
+                            <div class="prod-desc">
+                                <div class="prod-top">
+                                    <a href="/cn/productDetail/d7_2">
+                                        <div class="prod-title">
+                                            <h1>智能窗帘电机 B1 <span>锂电池版</span></h1>
+                                            <p>全面升级，更强大的窗帘管家</p>
+                                        </div>
+                                        <div class="prod-gongneng">免布线、免插座、安装更方便</br>定时开关，生活有序行进</div>
+
+                                    </a>
+                                </div>
+                                <div class="prod-link">
+                                    <a href="/cn/productDetail/d7_2">查看详情</a>
+                                    <a href="https://item.jd.com/100003511182.html" target="_blank"
+                                       class="buy">立即购买</a>
+                                </div>
+                            </div>
+                            <div class="cler"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item-box clr">
+                            <div class="prod-img">
+                                <a href="/cn/productDetail/curtain_controller_c2">
+                                    <img src="https://cdn.aqara.com/cdn/website/static/lodash-4.17.15/C2-homepage.png"
+                                         width="247" height="247" />
+                                </a>
+                            </div>
+                            <div class="prod-desc">
+                                <div class="prod-top">
+                                    <a href="/cn/productDetail/curtain_controller_c2">
+                                        <div class="prod-title">
+                                            <h1>智能窗帘电机 C2 </h1>
+                                            <p>别墅级智能窗帘管家</p>
+                                        </div>
+                                        <div class="prod-gongneng">多种控制方式：定时、语音、远程等</br>大扭力直流电机，静音减噪设计
+                                        </div>
+
+                                    </a>
+                                </div>
+                                <div class="prod-link">
+                                    <a href="/cn/productDetail/curtain_controller_c2">查看详情</a>
+
+                                </div>
+                            </div>
+                            <div class="cler"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item-box clr">
+                            <div class="prod-img">
+                                <a href="/cn/productDetail/curtain_controller_c2">
+                                    <img src="https://cdn.aqara.com/cdn/website/static/lodash-4.17.15/C2-homepage.png"
+                                         width="247" height="247" />
+                                </a>
+                            </div>
+                            <div class="prod-desc">
+                                <div class="prod-top">
+                                    <a href="/cn/productDetail/curtain_controller_c2">
+                                        <div class="prod-title">
+                                            <h1>智能窗帘电机 C2 </h1>
+                                            <p>别墅级智能窗帘管家</p>
+                                        </div>
+                                        <div class="prod-gongneng">多种控制方式：定时、语音、远程等</br>大扭力直流电机，静音减噪设计
+                                        </div>
+
+                                    </a>
+                                </div>
+                                <div class="prod-link">
+                                    <a href="/cn/productDetail/curtain_controller_c2">查看详情</a>
+
+                                </div>
+                            </div>
+                            <div class="cler"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item-box clr">
+                            <div class="prod-img">
+                                <a href="/cn/productDetail/curtain_controller_c2">
+                                    <img src="https://cdn.aqara.com/cdn/website/static/lodash-4.17.15/C2-homepage.png"
+                                         width="247" height="247" />
+                                </a>
+                            </div>
+                            <div class="prod-desc">
+                                <div class="prod-top">
+                                    <a href="/cn/productDetail/curtain_controller_c2">
+                                        <div class="prod-title">
+                                            <h1>智能窗帘电机 C2 </h1>
+                                            <p>别墅级智能窗帘管家</p>
+                                        </div>
+                                        <div class="prod-gongneng">多种控制方式：定时、语音、远程等</br>大扭力直流电机，静音减噪设计
+                                        </div>
+
+                                    </a>
+                                </div>
+                                <div class="prod-link">
+                                    <a href="/cn/productDetail/curtain_controller_c2">查看详情</a>
+
+                                </div>
+                            </div>
+                            <div class="cler"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item-box clr">
+                            <div class="prod-img">
+                                <a href="/cn/productDetail/curtain_controller_c2">
+                                    <img src="https://cdn.aqara.com/cdn/website/static/lodash-4.17.15/C2-homepage.png"
+                                         width="247" height="247" />
+                                </a>
+                            </div>
+                            <div class="prod-desc">
+                                <div class="prod-top">
+                                    <a href="/cn/productDetail/curtain_controller_c2">
+                                        <div class="prod-title">
+                                            <h1>智能窗帘电机 C2 </h1>
+                                            <p>别墅级智能窗帘管家</p>
+                                        </div>
+                                        <div class="prod-gongneng">多种控制方式：定时、语音、远程等</br>大扭力直流电机，静音减噪设计
+                                        </div>
+
+                                    </a>
+                                </div>
+                                <div class="prod-link">
+                                    <a href="/cn/productDetail/curtain_controller_c2">查看详情</a>
+
+                                </div>
+                            </div>
+                            <div class="cler"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item-box clr">
+                            <div class="prod-img">
+                                <a href="/cn/productDetail/curtain_controller_c2">
+                                    <img src="https://cdn.aqara.com/cdn/website/static/lodash-4.17.15/C2-homepage.png"
+                                         width="247" height="247" />
+                                </a>
+                            </div>
+                            <div class="prod-desc">
+                                <div class="prod-top">
+                                    <a href="/cn/productDetail/curtain_controller_c2">
+                                        <div class="prod-title">
+                                            <h1>智能窗帘电机 C2 </h1>
+                                            <p>别墅级智能窗帘管家</p>
+                                        </div>
+                                        <div class="prod-gongneng">多种控制方式：定时、语音、远程等</br>大扭力直流电机，静音减噪设计
+                                        </div>
+
+                                    </a>
+                                </div>
+                                <div class="prod-link">
+                                    <a href="/cn/productDetail/curtain_controller_c2">查看详情</a>
+
+                                </div>
+                            </div>
+                            <div class="cler"></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+
+</html>

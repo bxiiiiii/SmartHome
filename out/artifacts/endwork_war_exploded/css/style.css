@@ -1,0 +1,232 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.wrap {
+    width: 100%;
+    height: 100vh;
+    /* background-color: brown; */
+    /* background-image: "/home/bxiiiiii/Downloads/Telegram Desktop/pic.jpg"; */
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    /* background-image: url("/home/bxiiiiii/img-src/bg1.jpg"); */
+}
+
+.nav {
+    /* width: 110px; */
+
+    /* height: 820px; */
+    position: fixed;
+    background: rgba(0, 0, 0, 0.8);
+    background: rgba(3, 94, 123, 0.8);
+    background: rgba(40, 102, 110, 0.8);
+    /* border-radius: 20px 0% 0% 20px; */
+    overflow: hidden;
+    transition: 0.5s;
+    /* margin-left: 150px; */
+    /* overflow-y: auto; */
+    height: 100vh;
+    /* height: calc(100vh - 60px); */
+
+
+}
+
+/* .nav:hover {
+            width: 280px;
+        } */
+
+.btn {
+    width: 60px;
+    height: 10px;
+    display: flex;
+    justify-content: space-around;
+    margin-left: 25px;
+    margin-top: 25px;
+}
+
+.btn-item {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.btn-item:nth-child(1) {
+    background: #eb5a56;
+}
+
+.btn-item:nth-child(2) {
+    background: #f8bc33;
+}
+
+.btn-item:nth-child(3) {
+    background: #62cb44;
+}
+
+.icon {
+    width: 250px;
+    height: 60px;
+    margin-left: 25px;
+    margin-top: 20px;
+    display: flex;
+}
+
+.icon-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    overflow: hidden;
+}
+
+.icon-img img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.icon-con {
+    height: 60px;
+    margin-left: 25px;
+}
+
+.icon-con p {
+    font-size: 30px;
+    padding-top: 5px;
+}
+
+.icon-con h2 {
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.line {
+    width: 60px;
+    height: 1px;
+    background: rgba(245, 253, 255, 0.5);
+    transition: 0.5s;
+    margin-left: 20px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.nav:hover .line {
+    width: 230px;
+}
+
+.title {
+    width: 60px;
+    margin-left: 25px;
+    margin-bottom: 20px;
+}
+
+.title p {
+    font-size: 14px;
+}
+
+.menu {
+    width: 230px;
+    margin-left: 25px;
+}
+
+.item {
+    display: flex;
+    position: relative;
+    transition: 0.5s;
+    border-radius: 6px;
+}
+
+.item:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.licon {
+    width: 25px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.con {
+    width: 100px;
+    height: 60px;
+    display: flex;
+    margin-top: 25px;
+    margin-left: 50px;
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* transition: 0.5s; */
+    /* overflow: hidden; */
+    /* position: relative; */
+    /* left: -20px; */
+    /* opacity: 0; */
+}
+
+/* .con:hover{
+            width: 160px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+        } */
+.light {
+    width: 6px;
+    height: 70px;
+    background: #eb5a56;
+    position: absolute;
+    left: -25px;
+    transition: 0.5s;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+.rig {
+    /* position: relative; */
+    width: 1300px;
+    height: 820px;
+    margin: auto 300px;
+    /* background: rgba(36, 15, 15, 0.8); */
+    /* background: rgba(124, 152, 133, 0.8); */
+    /* background: rgba(0, 0, 0, 0.8); */
+    border-radius: 0 20px 20px 0;
+}
+
+.table_head {
+    /* margin-top: 10px; */
+    font-size: 70px;
+    font-weight: bold;
+    border-bottom: solid;
+}
+
+.table {
+    margin-top: 30px;
+    margin-left: 25px;
+}
+
+.td {
+    width: 200px;
+    height: 100px;
+    /* font-size: 10px; */
+    font-weight: bold;
+
+    border-radius: 20px 30px;
+}
+
+.choice1 {
+    margin-top: 20px;
+    margin-left: 20px;
+    font-size: 20px;
+}
+
+.choice {
+    border-radius: 30px;
+    color: #000000;
+    width: 150px;
+}
