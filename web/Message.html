@@ -2,171 +2,171 @@
 <html>
 
 <head>
-  <meta charset="UTF-8" />
-  <link rel="stylesheet" href="../css/styles.css" />
-  <style>
-    .todo-list hr {
-      margin: 0;
-    }
+    <meta charset="UTF-8"/>
+    <link rel="stylesheet" href="../css/style.css"/>
+    <style>
+        .todo-list hr {
+            margin: 0;
+        }
 
-    .todo-list .todo-item {
-      padding: 10px 15px;
-      transition(.2s ease);
-      cursor: pointer;
-    }
+        .todo-list .todo-item {
+            padding: 10px 15px;
+        transition(.2 s ease);
+            cursor: pointer;
+        }
 
-    .todo-list .todo-item:hover {
-      background: rgba(33, 33, 33, 0.05);
-    }
+        .todo-list .todo-item:hover {
+            background: rgba(33, 33, 33, 0.05);
+        }
 
-    /* .todo-list .todo-item .checkbox input[type="checkbox"] {
-        width: 100%;
-        position: relative;
-    } */
+        /* .todo-list .todo-item .checkbox input[type="checkbox"] {
+            width: 100%;
+            position: relative;
+        } */
 
-    .todo-list .todo-item .checkbox input[type="checkbox"]+label {
-      color: #212121;
-      padding-left: 10px;
-    }
+        .todo-list .todo-item .checkbox input[type="checkbox"] + label {
+            color: #212121;
+            padding-left: 10px;
+        }
 
-    .todo-list .todo-item .checkbox input[type="checkbox"]:checked+label {
-      color: #878787;
-      text-decoration: line-through;
-    }
-  </style>
+        .todo-list .todo-item .checkbox input[type="checkbox"]:checked + label {
+            color: #878787;
+            text-decoration: line-through;
+        }
+    </style>
 </head>
 
 <body>
 <div class="wrap">
-  <div class="nav">
-    <div class="btn">
-      <div class="btn-item"></div>
-      <div class="btn-item"></div>
-      <div class="btn-item"></div>
+    <div class="nav">
+        <div class="btn">
+            <div class="btn-item"></div>
+            <div class="btn-item"></div>
+            <div class="btn-item"></div>
+        </div>
+        <div class="icon">
+            <div class="icon-img"><img src="/home/bxiiiiii/Downloads/Telegram Desktop/pic.jpg"></div>
+            <div class="icon-con">
+                <p>Xiong Junjie</p>
+                <h2>School of Computer Software 2003</h2>
+            </div>
+        </div>
+        <div class="line"></div>
+        <div class="title">
+            <p>Query</p>
+        </div>
+        <div class="menu">
+            <a href="../DeviceManage.html">
+                <div class="item">
+                    <div class="light"></div>
+                    <div class="licon"><img src="img/control-center.png" height="50" width="50"></div>
+                    <div class="con">设备管理</div>
+                    <div class="ricon"></div>
+                </div>
+            </a>
+            <a href="../DataManage.html">
+                <div class="item">
+                    <div class="light"></div>
+                    <div class="licon"><img src="img/analysis.png" height="50" width="50"></div>
+                    <div class="con">数据信息管理</div>
+                    <div class="ricon"></div>
+                </div>
+            </a>
+            <a href="../ApplianceControl.html">
+                <div class="item">
+                    <div class="light"></div>
+                    <div class="licon"><img src="img/smart-fridge.png" height="50" width="50"></div>
+                    <div class="con">家电控制</div>
+                    <div class="ricon"></div>
+                </div>
+            </a>
+            <a href="../VideoMonitor.html">
+                <div class="item">
+                    <div class="light"></div>
+                    <div class="licon"><img src="img/social-media.png" height="50" width="50"></div>
+                    <div class="con">视频监控</div>
+                    <div class="ricon"></div>
+                </div>
+            </a>
+            <a href="../Message.html">
+                <div class="item">
+                    <div class="light"></div>
+                    <div class="licon"><img src="img/messages.png" height="50" width="50"></div>
+                    <div class="con">消息推送</div>
+                    <div class="ricon"></div>
+                </div>
+            </a>
+            <a href="../Login.html">
+                <div class="item">
+                    <div class="light"></div>
+                    <div class="licon"><img src="img/check-out.png" height="50" width="50"></div>
+                    <div class="con">退出</div>
+                    <div class="ricon"></div>
+                </div>
+            </a>
+        </div>
+        <div class="line"></div>
     </div>
-    <div class="icon">
-      <div class="icon-img"><img src="/home/bxiiiiii/Downloads/Telegram Desktop/pic.jpg"></div>
-      <div class="icon-con">
-        <p>Xiong Junjie</p>
-        <h2>School of Computer Software 2003</h2>
-      </div>
+    <div class="rig">
+        <div class="todo-box-wrap">
+            <ul class="todo-list todo-box-nicescroll-bar">
+                <li class="todo-item">
+                    <div class="checkbox checkbox-default">
+                        <input type="checkbox" id="checkbox001">
+                        <label for="checkbox001">Record The First Episode</label>
+                    </div>
+                </li>
+                <li>
+                    <hr class="light-grey-hr">
+                </li>
+                <li class="todo-item">
+                    <div class="checkbox checkbox-pink">
+                        <input type="checkbox" id="checkbox002">
+                        <label for="checkbox002">Prepare The Conference Schedule</label>
+                    </div>
+                </li>
+                <li>
+                    <hr class="light-grey-hr">
+                </li>
+                <li class="todo-item">
+                    <div class="checkbox checkbox-warning">
+                        <input type="checkbox" id="checkbox003">
+                        <label for="checkbox003">Decide The Live Discussion Time</label>
+                    </div>
+                </li>
+                <li>
+                    <hr class="light-grey-hr">
+                </li>
+                <li class="todo-item">
+                    <div class="checkbox checkbox-success">
+                        <input type="checkbox" id="checkbox004">
+                        <label for="checkbox004">Prepare For The Next Project</label>
+                    </div>
+                </li>
+                <li>
+                    <hr class="light-grey-hr">
+                </li>
+                <li class="todo-item">
+                    <div class="checkbox checkbox-danger">
+                        <input type="checkbox" id="checkbox005">
+                        <label for="checkbox005">Finish Up AngularJs Tutorial</label>
+                    </div>
+                </li>
+                <li>
+                    <hr class="light-grey-hr">
+                </li>
+                <li class="todo-item">
+                    <div class="checkbox checkbox-purple">
+                        <input type="checkbox" id="checkbox006">
+                        <label for="checkbox006">Finish Infinity Project</label>
+                    </div>
+                </li>
+                <li>
+                    <hr class="light-grey-hr">
+                </li>
+            </ul>
+        </div>
     </div>
-    <div class="line"></div>
-    <div class="title">
-      <p>Query</p>
-    </div>
-    <div class="menu">
-      <a href="../DeviceManege.html">
-        <div class="item">
-          <div class="light"></div>
-          <div class="licon"><img src="/home/bxiiiiii/img-src/user.png" height="50" width="50"></div>
-          <div class="con">设备管理</div>
-          <div class="ricon"></div>
-        </div>
-      </a>
-      <a href="../DataManage.html">
-        <div class="item">
-          <div class="light"></div>
-          <div class="licon"><img src="/home/bxiiiiii/img-src/schedule.png" height="50" width="50"></div>
-          <div class="con">数据信息管理</div>
-          <div class="ricon"></div>
-        </div>
-      </a>
-      <a href="../ApplianceControl.html">
-        <div class="item">
-          <div class="light"></div>
-          <div class="licon"><img src="/home/bxiiiiii/img-src/score.png" height="50" width="50"></div>
-          <div class="con">家电控制</div>
-          <div class="ricon"></div>
-        </div>
-      </a>
-      <a href="../VideoMonitor.html">
-        <div class="item">
-          <div class="light"></div>
-          <div class="licon"><img src="/home/bxiiiiii/img-src/exam.png" height="50" width="50"></div>
-          <div class="con">视频监控</div>
-          <div class="ricon"></div>
-        </div>
-      </a>
-      <a href="../Message.html">
-        <div class="item">
-          <div class="light"></div>
-          <div class="licon"><img src="/home/bxiiiiii/img-src/open-book.png" height="50" width="50"></div>
-          <div class="con">消息推送</div>
-          <div class="ricon"></div>
-        </div>
-      </a>
-      <a href="../Login.html">
-        <div class="item">
-          <div class="light"></div>
-          <div class="licon"><img src="/home/bxiiiiii/img-src/credits.png" height="50" width="50"></div>
-          <div class="con">退出</div>
-          <div class="ricon"></div>
-        </div>
-      </a>
-    </div>
-    <div class="line"></div>
-  </div>
-  <div class="rig">
-    <div class="todo-box-wrap">
-      <ul class="todo-list todo-box-nicescroll-bar">
-        <li class="todo-item">
-          <div class="checkbox checkbox-default">
-            <input type="checkbox" id="checkbox001">
-            <label for="checkbox001">Record The First Episode</label>
-          </div>
-        </li>
-        <li>
-          <hr class="light-grey-hr">
-        </li>
-        <li class="todo-item">
-          <div class="checkbox checkbox-pink">
-            <input type="checkbox" id="checkbox002">
-            <label for="checkbox002">Prepare The Conference Schedule</label>
-          </div>
-        </li>
-        <li>
-          <hr class="light-grey-hr">
-        </li>
-        <li class="todo-item">
-          <div class="checkbox checkbox-warning">
-            <input type="checkbox" id="checkbox003">
-            <label for="checkbox003">Decide The Live Discussion Time</label>
-          </div>
-        </li>
-        <li>
-          <hr class="light-grey-hr">
-        </li>
-        <li class="todo-item">
-          <div class="checkbox checkbox-success">
-            <input type="checkbox" id="checkbox004">
-            <label for="checkbox004">Prepare For The Next Project</label>
-          </div>
-        </li>
-        <li>
-          <hr class="light-grey-hr">
-        </li>
-        <li class="todo-item">
-          <div class="checkbox checkbox-danger">
-            <input type="checkbox" id="checkbox005">
-            <label for="checkbox005">Finish Up AngularJs Tutorial</label>
-          </div>
-        </li>
-        <li>
-          <hr class="light-grey-hr">
-        </li>
-        <li class="todo-item">
-          <div class="checkbox checkbox-purple">
-            <input type="checkbox" id="checkbox006">
-            <label for="checkbox006">Finish Infinity Project</label>
-          </div>
-        </li>
-        <li>
-          <hr class="light-grey-hr">
-        </li>
-      </ul>
-    </div>
-  </div>
 </div>
 </body>
 

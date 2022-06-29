@@ -11,31 +11,13 @@ import org.json.JSONStringer;
 public class TestServlet extends HttpServlet{
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        System.out.println("hello");
-        PrintWriter out = resp.getWriter();
-        String title = "使用 GET 方法读取表单数据";
-        // 处理中文
-        String name =new String(req.getParameter("username").getBytes("ISO-8859-1"),"UTF-8");
-        String docType = "<!DOCTYPE html> \n";
-        out.println(docType +
-                "<html>\n" +
-                "<head><title>" + title + "</title></head>\n" +
-                "<body bgcolor=\"#f0f0f0\">\n" +
-                "<h1 align=\"center\">" + title + "</h1>\n" +
-                "<ul>\n" +
-                "  <li><b>站点名</b>："
-                + name + "\n" +
-                "  <li><b>网址</b>："
-                + req.getParameter("url") + "\n" +
-                "</ul>\n" +
-                "</body></html>");
-//        super.doGet(req, resp);
+        this.doPost(req, resp);
     }
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.setCharacterEncoding("utf-8");
-        String name = req.getParameter("username");
+        String name = req.getParameter("name");
         String password = req.getParameter("password");
         String account = req.getParameter("account");
         System.out.println(name+password+account);
