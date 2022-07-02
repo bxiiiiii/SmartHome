@@ -2,186 +2,288 @@
 <html>
 
 <head>
-    <meta charset="UTF-8"/>
-    <link rel="stylesheet" href="../css/style.css"/>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.3.3/dist/echarts.min.js"></script>
     <style>
+        .g {
+            /* position: absolute; */
+            /* left: 450px; */
+            /* margin: 20px; */
+            /* bottom: 40px; */
+            display: block;
+            width: 250px;
+            height: 100px;
+            /* font: 900 25px ''; */
+            /* text-decoration: none; */
+            line-height: 50px;
+            border-radius: 20px;
+            background-image: linear-gradient(to right, rgba(240, 192, 169, 255), rgba(247, 145, 140, 255));
+            text-align: center;
+        }
+
+        .item_data {
+            border-radius: 10px;
+            width: 1500px;
+            overflow: hidden;
+        }
     </style>
 </head>
 
 <body>
-<div class="wrap">
-    <div class="nav">
-        <div class="btn">
-            <div class="btn-item"></div>
-            <div class="btn-item"></div>
-            <div class="btn-item"></div>
-        </div>
-        <div class="icon">
-            <div class="icon-img"><img src="img/pic.jpg"></div>
-            <div class="icon-con">
-                <p>Xiong Junjie</p>
-                <h2>School of Computer Software 2003</h2>
+    <div class="wrap">
+        <div class="nav">
+            <div class="btn">
+                <div class="btn-item"></div>
+                <div class="btn-item"></div>
+                <div class="btn-item"></div>
             </div>
-        </div>
-        <div class="line"></div>
-        <div class="title">
-            <p>Query</p>
-        </div>
-        <div class="menu">
-            <a href="DeviceManage.html">
-                <div class="item">
-                    <div class="light"></div>
-                    <div class="licon"><img src="img/control-center.png" height="50" width="50"></div>
-                    <div class="con">设备管理</div>
-                    <div class="ricon"></div>
-                </div>
-            </a>
-            <a href="../DataManage.html">
-                <div class="item">
-                    <div class="light"></div>
-                    <div class="licon"><img src="img/analysis.png" height="50" width="50"></div>
-                    <div class="con">数据信息管理</div>
-                    <div class="ricon"></div>
-                </div>
-            </a>
-            <a href="../ApplianceControl.html">
-                <div class="item">
-                    <div class="light"></div>
-                    <div class="licon"><img src="img/smart-fridge.png" height="50" width="50"></div>
-                    <div class="con">家电控制</div>
-                    <div class="ricon"></div>
-                </div>
-            </a>
-            <a href="../VideoMonitor.html">
-                <div class="item">
-                    <div class="light"></div>
-                    <div class="licon"><img src="img/social-media.png" height="50" width="50"></div>
-                    <div class="con">视频监控</div>
-                    <div class="ricon"></div>
-                </div>
-            </a>
-            <a href="../Message.html">
-                <div class="item">
-                    <div class="light"></div>
-                    <div class="licon"><img src="img/messages.png" height="50" width="50"></div>
-                    <div class="con">消息推送</div>
-                    <div class="ricon"></div>
-                </div>
-            </a>
-            <a href="../Login.html">
-                <div class="item">
-                    <div class="light"></div>
-                    <div class="licon"><img src="img/check-out.png" height="50" width="50"></div>
-                    <div class="con">退出</div>
-                    <div class="ricon"></div>
-                </div>
-            </a>
-        </div>
-        <div class="line"></div>
-    </div>
-    <div class="rig">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="panel panel-default card-view">
-                    <div class="panel-heading">
-                        <div class="pull-left">
-                            <h6 class="panel-title txt-dark">line Chart</h6>
-                        </div>
-                        <div class="clearfix"></div>
-                    </div>
-                    <div class="panel-wrapper collapse in">
-                        <div class="panel-body">
-                            <canvas id="chart_1" height="100"></canvas>
-                        </div>
-                    </div>
+            <div class="icon">
+                <div class="icon-img"><img src="img/pic.jpg"></div>
+                <div class="icon-con">
+                    <p>Xiong Junjie</p>
+                    <h2>School of Computer Software 2003</h2>
                 </div>
             </div>
+            <div class="line"></div>
+            <div class="title">
+                <p>Query</p>
+            </div>
+            <div class="menu">
+                <a href="DeviceManage.html">
+                    <div class="item">
+                        <div class="light"></div>
+                        <div class="licon"><img src="img/control-center.png" height="50" width="50"></div>
+                        <div class="con">设备管理</div>
+                        <div class="ricon"></div>
+                    </div>
+                </a>
+                <a href="DataManage.html">
+                    <div class="item">
+                        <div class="light"></div>
+                        <div class="licon"><img src="img/analysis.png" height="50" width="50"></div>
+                        <div class="con">数据信息管理</div>
+                        <div class="ricon"></div>
+                    </div>
+                </a>
+                <a href="ApplianceControl.html">
+                    <div class="item">
+                        <div class="light"></div>
+                        <div class="licon"><img src="img/smart-fridge.png" height="50" width="50"></div>
+                        <div class="con">家电控制</div>
+                        <div class="ricon"></div>
+                    </div>
+                </a>
+                <a href="VideoMonitor.html">
+                    <div class="item">
+                        <div class="light"></div>
+                        <div class="licon"><img src="img/social-media.png" height="50" width="50"></div>
+                        <div class="con">视频监控</div>
+                        <div class="ricon"></div>
+                    </div>
+                </a>
+                <a href="Message.html">
+                    <div class="item">
+                        <div class="light"></div>
+                        <div class="licon"><img src="img/messages.png" height="50" width="50"></div>
+                        <div class="con">消息推送</div>
+                        <div class="ricon"></div>
+                    </div>
+                </a>
+                <a href="index.html">
+                    <div class="item">
+                        <div class="light"></div>
+                        <div class="licon"><img src="img/check-out.png" height="50" width="50"></div>
+                        <div class="con">退出</div>
+                        <div class="ricon"></div>
+                    </div>
+                </a>
+            </div>
+            <div class="line"></div>
+        </div>
+        <div class="rig">
+            <div class="g">
+                <p style="font-size: 50px;">5 G</p>
+                <p>累计使用流量</p>
+            </div>
+            <div class="g">
+                <p style="font-size: 50px;">5 G</p>
+                <p>累计使用流量</p>
+            </div>
+            <div class="main" id="main" style="width: 1000px; height: 400px;"></div>
+            <div class="data">
+                <ul>
+                    <div class="item_data">
+                        <div id="title" style="height:50px;background-color:rgb(60, 112, 198);" onclick="onTileClick()">
+                            rose1</div>
+                        <div id="content" style="height: 0px;background-color: #cce1e2;transition: height 0.2s;">
+                            <div class="da" id="da" style="width: 1000px; height: 500px;"></div>
+                        </div>
+                    </div>
+                    <div class="item_data">
+                        <div id="title" style="height:50px;background-color: rgb(145, 204, 117);"
+                            onclick="onTileClick1()">rose2</div>
+                        <div id="content1" style="height: 0px;background-color: #cce1e2;transition: height 0.2s;">
+                            <div class="da1" id="da1" style="width: 1000px; height: 500px;"></div>
+                        </div>
+                    </div>
+                    <div class="item_data">
+                        <div id="title" style="height:50px;background-color: rgb(250,200,88);"
+                            onclick="onTileClick2()">rose3</div>
+                        <div id="content2" style="height: 0px;background-color: #cce1e2;transition: height 0.2s;">
+                            <div class="da1" id="da1" style="width: 1000px; height: 500px;"></div>
+                        </div>
+                    </div>
+                    <div class="item_data">
+                        <div id="title" style="height:50px;background-color: rgb(238,102,102);"
+                            onclick="onTileClick3()">rose4</div>
+                        <div id="content3" style="height: 0px;background-color: #cce1e2;transition: height 0.2s;">
+                            <div class="da1" id="da1" style="width: 1000px; height: 500px;"></div>
+                        </div>
+                    </div>
+                    <div class="item_data">
+                        <div id="title" style="height:50px;background-color: rgb(115,192,222);"
+                            onclick="onTileClick4()">rose5</div>
+                        <div id="content4" style="height: 0px;background-color: #cce1e2;transition: height 0.2s;">
+                            <div class="da1" id="da1" style="width: 1000px; height: 500px;"></div>
+                        </div>
+                    </div>
+                    <div class="item_data">
+                        <div id="title" style="height:50px;background-color: rgb(59,162,114);"
+                            onclick="onTileClick5()">rose6</div>
+                        <div id="content5" style="height: 0px;background-color: #cce1e2;transition: height 0.2s;">
+                            <div class="da1" id="da1" style="width: 1000px; height: 500px;"></div>
+                        </div>
+                    </div>
+                    <div class="item_data">
+                        <div id="title" style="height:50px;background-color: rgb(252,132,82);"
+                            onclick="onTileClick6()">rose7</div>
+                        <div id="content6" style="height: 0px;background-color: #cce1e2;transition: height 0.2s;">
+                            <div class="da1" id="da1" style="width: 1000px; height: 500px;"></div>
+                        </div>
+                    </div>
+                    <div class="item_data">
+                        <div id="title" style="height:50px;background-color: rgb(154,96,180);"
+                            onclick="onTileClick7()">rose8</div>
+                        <div id="content7" style="height: 0px;background-color: #cce1e2;transition: height 0.2s;">
+                            <div class="da1" id="da1" style="width: 1000px; height: 500px;"></div>
+                        </div>
+                    </div>
+                </ul>
+            </div>
         </div>
     </div>
-    <script>
-        $(document).ready(function () {
-            "use strict";
+    <script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('main'));
 
-            if ($('#chart_1').length > 0) {
-                var ctx1 = document.getElementById("chart_1").getContext("2d");
-                var data1 = {
-                    labels: ["January", "February", "March", "April", "May", "June", "July"],
-                    datasets: [
-                        {
-                            label: "fir",
-                            backgroundColor: "rgba(74, 162, 60,1)",
-                            borderColor: "rgba(74, 162, 60,1)",
-                            pointBorderColor: "rgba(74, 162, 60,1)",
-                            pointHighlightStroke: "rgba(74, 162, 60,1)",
-                            data: [0, 59, 80, 58, 20, 55, 40]
-                        },
-                        {
-                            label: "sec",
-                            backgroundColor: "rgba(248, 179, 45,1)",
-                            borderColor: "rgba(248, 179, 45,1)",
-                            pointBorderColor: "rgba(248, 179, 45,1)",
-                            pointBackgroundColor: "rgba(248, 179, 45,1)",
-                            data: [28, 48, 40, 19, 86, 27, 90],
-                        }
-
+        // 指定图表的配置项和数据
+        var option = {
+            title: {
+                text: 'Nightingale Chart',
+                subtext: 'Fake Data',
+                left: 'center'
+            },
+            tooltip: {
+                trigger: 'item',
+                formatter: '{a} <br/>{b} : {c} ({d}%)'
+            },
+            legend: {
+                left: 'center',
+                top: 'bottom',
+                data: [
+                    'rose1',
+                    'rose2',
+                    'rose3',
+                    'rose4',
+                    'rose5',
+                    'rose6',
+                    'rose7',
+                    'rose8'
+                ]
+            },
+            series: [
+                {
+                    name: 'Area Mode',
+                    type: 'pie',
+                    radius: [20, 140],
+                    center: ['75%', '50%'],
+                    roseType: 'area',
+                    itemStyle: {
+                        borderRadius: 5
+                    },
+                    data: [
+                        { value: 30, name: 'rose 1' },
+                        { value: 28, name: 'rose 2' },
+                        { value: 26, name: 'rose 3' },
+                        { value: 24, name: 'rose 4' },
+                        { value: 22, name: 'rose 5' },
+                        { value: 20, name: 'rose 6' },
+                        { value: 18, name: 'rose 7' },
+                        { value: 16, name: 'rose 8' }
                     ]
-                };
+                }
+            ]
+        };
 
-                var areaChart = new Chart(ctx1, {
-                    type: "line",
-                    data: data1,
-
-                    options: {
-                        tooltips: {
-                            mode: "label"
-                        },
-                        elements: {
-                            point: {
-                                hitRadius: 90
-                            }
-                        },
-
-                        scales: {
-                            yAxes: [{
-                                stacked: true,
-                                gridLines: {
-                                    color: "rgba(33,33,33,0)",
-                                },
-                                ticks: {
-                                    fontFamily: "Roboto",
-                                    fontColor: "#878787"
-                                }
-                            }],
-                            xAxes: [{
-                                stacked: true,
-                                gridLines: {
-                                    color: "rgba(33,33,33,0)",
-                                },
-                                ticks: {
-                                    fontFamily: "Roboto",
-                                    fontColor: "#878787"
-                                }
-                            }]
-                        },
-                        animation: {
-                            duration: 3000
-                        },
-                        responsive: true,
-                        legend: {
-                            display: false,
-                        },
-                        tooltip: {
-                            backgroundColor: 'rgba(33,33,33,1)',
-                            cornerRadius: 0,
-                            footerFontFamily: "'Roboto'"
-                        }
-
-                    }
-                });
-            }
-        });
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
     </script>
-</div>
+    <script type="text/javascript">
+        var content = document.getElementById("content");
+        function onTileClick() { content.style.height = content.offsetHeight === 600 ? 0 + 'px' : 600 + 'px'; }
+    </script>
+    <script type="text/javascript">
+        var content1 = document.getElementById("content1");
+        function onTileClick1() { content1.style.height = content1.offsetHeight === 600 ? 0 + 'px' : 600 + 'px'; }
+    </script>
+    <script type="text/javascript">
+        var content2 = document.getElementById("content2");
+        function onTileClick2() { content2.style.height = content2.offsetHeight === 600 ? 0 + 'px' : 600 + 'px'; }
+    </script>
+    <script type="text/javascript">
+        var content3 = document.getElementById("content3");
+        function onTileClick3() { content3.style.height = content3.offsetHeight === 600 ? 0 + 'px' : 600 + 'px'; }
+    </script>
+    <script type="text/javascript">
+        var content4 = document.getElementById("content4");
+        function onTileClick4() { content4.style.height = content4.offsetHeight === 600 ? 0 + 'px' : 600 + 'px'; }
+    </script>
+    <script type="text/javascript">
+        var content5 = document.getElementById("content5");
+        function onTileClick5() { content1.style.height = content1.offsetHeight === 600 ? 0 + 'px' : 600 + 'px'; }
+    </script>
+    <script type="text/javascript">
+        var content6 = document.getElementById("content6");
+        function onTileClick6() { content6.style.height = content6.offsetHeight === 600 ? 0 + 'px' : 600 + 'px'; }
+    </script>
+    <script type="text/javascript">
+        var content7 = document.getElementById("content7");
+        function onTileClick7() { content7.style.height = content7.offsetHeight === 600 ? 0 + 'px' : 600 + 'px'; }
+    </script>
+    <script type="text/javascript">
+        var chartDom = document.getElementById('da');
+        var myChart = echarts.init(chartDom);
+        var option;
+
+        option = {
+            xAxis: {
+                type: 'category',
+                data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+            },
+            yAxis: {
+                type: 'value'
+            },
+            series: [
+                {
+                    data: [150, 230, 224, 218, 135, 147, 260],
+                    type: 'line'
+                }
+            ]
+        };
+
+        option && myChart.setOption(option);
+    </script>
 </body>
 
 </html>
