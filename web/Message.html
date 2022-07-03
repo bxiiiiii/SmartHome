@@ -2,16 +2,33 @@
 <html>
 
 <head>
-    <meta charset="UTF-8"/>
-    <link rel="stylesheet" href="css/style.css"/>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="css/style.css" />
     <style>
+        .g {
+            /* position: absolute; */
+            /* left: 450px; */
+            margin: 20px;
+            /* bottom: 40px; */
+            float: left;
+            display: block;
+            width: 1500px;
+            /* height: px; */
+            /* font: 900 25px ''; */
+            /* text-decoration: none; */
+            line-height: 50px;
+            border-radius: 20px;
+            background-image: linear-gradient(to right, rgba(240, 192, 169, 255), rgba(247, 145, 140, 255));
+            /* text-align: center; */
+        }
+
         .todo-list hr {
             margin: 0;
         }
 
         .todo-list .todo-item {
             padding: 10px 15px;
-        transition(0.2s ease);
+            transition(0.2s ease);
             cursor: pointer;
         }
 
@@ -24,150 +41,410 @@
             position: relative;
         } */
 
-        .todo-list .todo-item .checkbox input[type="checkbox"] + label {
+        .todo-list .todo-item .checkbox input[type="checkbox"]+label {
             color: #212121;
             padding-left: 10px;
         }
 
-        .todo-list .todo-item .checkbox input[type="checkbox"]:checked + label {
+        .todo-list .todo-item .checkbox input[type="checkbox"]:checked+label {
             color: #878787;
             text-decoration: line-through;
+        }
+
+        /* --------- Card Animation ---------- */
+        .card:not(:empty):hover,
+        .card:not(:empty):focus {
+            z-index: 1;
+            color: #fff;
+            background: #ea124f;
+            opacity: 1;
+            transform: scale(1.15) rotateZ(20deg);
+            cursor: pointer;
+
+
+
+
+        }
+
+        .card:after {
+            opacity: 1;
+        }
+
+        .card:before {
+            opacity: 0;
+        }
+
+        .card:not(:empty):before {
+            box-shadow: -2px 2px 8px 2px hsla(0, 0%, 0%, 0.2);
+        }
+
+        .card {
+            padding: 10px;
+            background: #fcc99e;
+            border-radius: .7em;
+            opacity: 0.6;
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-end;
+
+            transition: all 0.4s cubic-bezier(0.33, 1, 0.68, 1);
+            transition-property: background, transform, color, opacity;
+        }
+
+        .card:empty {
+            opacity: 0.3;
+        }
+
+        .card:before,
+        .card:after {
+            content: "";
+            position: absolute;
+            border-radius: .7em;
+            z-index: -1;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transition: opacity 0.4s cubic-bezier(0.33, 1, 0.68, 1);
+        }
+
+        .card:after {
+            box-shadow: -20px 20px 12px 6px hsla(0, 0%, 0%, 0.2);
+            opacity: 0;
+        }
+
+        /* --------- Grid ---------- */
+        .grid {
+            width: 100%;
+            height: 100%;
+            padding: 20px;
+            display: grid;
+            overflow: hidden;
+            grid-template-columns: repeat(5, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+            grid-gap: 20px;
+        }
+
+        .item1 {
+            grid-area: 1 / 1 / 3 / 3;
+        }
+
+        .item2 {
+            grid-area: 3 / 3 / 4 / 4;
+
+
+        }
+
+        .item2.card:hover,
+        .item2.card:focus {
+            background: #00005c;
+        }
+
+        .item3 {
+            grid-area: 4 / 1 / 5 / 4;
+        }
+
+        .item4 {
+            grid-area: 1 / 3 / 2 / 5;
+        }
+
+        .item5 {
+            grid-area: 2 / 4 / 3 / 5;
+        }
+
+        .item6 {
+            grid-area: 3 / 4 / 4 / 5;
+        }
+
+        .item7 {
+            grid-area: 3 / 4 / 5 / 5;
+        }
+
+        .item8 {
+            grid-area: 1 / 5 / 2 / 6;
+        }
+
+        .item8.card:hover,
+        .item8.card:focus {
+            background: #f57b51;
+        }
+
+        .item9 {
+            grid-area: 2 / 5 / 3 / 6;
+        }
+
+        .item10 {
+            grid-area: 3 / 5 / 4 / 6;
+        }
+
+        .item11 {
+            grid-area: 4 / 5 / 5 / 6;
+
+
+        }
+
+        .item11.card:hover,
+        .item11.card:focus {
+            background: #00a8cc;
+        }
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        /*--------- Layout -------- */
+        *,
+        *:before,
+        *:after {
+            position: relative;
+            box-sizing: border-box;
+        }
+
+        body,
+        html {
+            height: 100%;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "PT Sans", sans-serif;
+            background: #fff6d9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
+            margin: 2.75rem 0 1.05rem;
+            line-height: 1.2;
+            font-family: "Jost", sans-serif;
+        }
+
+        h1 {
+            margin-top: 0;
+            font-size: 3.052em;
+        }
+
+        h2 {
+            font-size: 1em;
+        }
+
+        p {
+            line-height: 1.3;
+        }
+
+        /* --------- Responsive ---------- */
+        @media only screen and (max-width: 600px) {
+            .grid {
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(6, minmax(auto, 300px));
+                overflow-y: scroll;
+            }
+
+            .item1 {
+                grid-area: 1 / 1 / 2 / 3;
+            }
+
+            .card {
+                grid-area: auto;
+                text-align: left;
+
+            }
+
+            .card:empty {
+                display: none;
+            }
+        }
+
+        /* $clouds: #ecf0f1;
+        $turquoise: #1abc9c;
+        $greensea: #16a085;
+        $night: #34495e;
+        $midnight: #2c3e50;
+        $transition: all .5s ease; */
+
+        /* body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: $clouds;
+            height: 100vh;
+        } */
+
+        /* Hide the input */
+        input[type="checkbox"] {
+            position: absolute;
+            opacity: 0;
+            z-index: -1;
+        }
+
+        .check-trail {
+            display: flex;
+            align-items: center;
+            width: 70x;
+            height: 25px;
+            background: #2c3e50;
+            border-radius: 2.5em;
+            transition: all .5s ease;
+            cursor: pointer;
+        }
+
+        .check-handler {
+            display: flex;
+            margin-left: 0.5em;
+            justify-content: center;
+            align-items: center;
+            width: 2em;
+            height: 2em;
+            background: #34495e;
+            border-radius: 50%;
+            transition: all .5s ease;
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .check-handler:before {
+            content: "\00D7";
+            color: white;
+            font-size: 2em;
+            font-weight: bold;
+        }
+
+        input[type="checkbox"]:checked+.check-trail {
+            background: #16a085;
+        }
+
+        input[type="checkbox"]:checked+.check-trail .check-handler {
+            margin-left: 50%;
+            background: #1abc9c;
+        }
+
+        input[type="checkbox"]:checked+.check-trail .check-handler::before {
+            content: "\2714"
         }
     </style>
 </head>
 
 <body>
-<div class="wrap">
-    <div class="nav">
-        <div class="btn">
-            <div class="btn-item"></div>
-            <div class="btn-item"></div>
-            <div class="btn-item"></div>
-        </div>
-        <div class="icon">
-            <div class="icon-img"><img src="/home/bxiiiiii/Downloads/Telegram Desktop/pic.jpg"></div>
-            <div class="icon-con">
-                <p>Xiong Junjie</p>
-                <h2>School of Computer Software 2003</h2>
+    <div class="wrap">
+        <div class="nav">
+            <div class="btn">
+                <div class="btn-item"></div>
+                <div class="btn-item"></div>
+                <div class="btn-item"></div>
             </div>
+            <div class="icon">
+                <div class="icon-img"><img src="img/pic.jpg"></div>
+                <div class="icon-con">
+                    <p>Xiong Junjie</p>
+                    <h2>School of Computer Software 2003</h2>
+                </div>
+            </div>
+            <div class="line"></div>
+            <div class="title">
+                <p>Query</p>
+            </div>
+            <div class="menu">
+                <a href="DeviceManage.html">
+                    <div class="item">
+                        <div class="light"></div>
+                        <div class="licon"><img src="img/control-center.png" height="50" width="50"></div>
+                        <div class="con">设备管理</div>
+                        <div class="ricon"></div>
+                    </div>
+                </a>
+                <a href="DataManage.html">
+                    <div class="item">
+                        <div class="light"></div>
+                        <div class="licon"><img src="img/analysis.png" height="50" width="50"></div>
+                        <div class="con">数据信息管理</div>
+                        <div class="ricon"></div>
+                    </div>
+                </a>
+                <a href="ApplianceControl.html">
+                    <div class="item">
+                        <div class="light"></div>
+                        <div class="licon"><img src="img/smart-fridge.png" height="50" width="50"></div>
+                        <div class="con">家电控制</div>
+                        <div class="ricon"></div>
+                    </div>
+                </a>
+                <a href="VideoMonitor.html">
+                    <div class="item">
+                        <div class="light"></div>
+                        <div class="licon"><img src="img/social-media.png" height="50" width="50"></div>
+                        <div class="con">视频监控</div>
+                        <div class="ricon"></div>
+                    </div>
+                </a>
+                <a href="Message.html">
+                    <div class="item">
+                        <div class="light"></div>
+                        <div class="licon"><img src="img/messages.png" height="50" width="50"></div>
+                        <div class="con">消息推送</div>
+                        <div class="ricon"></div>
+                    </div>
+                </a>
+                <a href="index.html">
+                    <div class="item">
+                        <div class="light"></div>
+                        <div class="licon"><img src="img/check-out.png" height="50" width="50"></div>
+                        <div class="con">退出</div>
+                        <div class="ricon"></div>
+                    </div>
+                </a>
+            </div>
+            <div class="line"></div>
         </div>
-        <div class="line"></div>
-        <div class="title">
-            <p>Query</p>
-        </div>
-        <div class="menu">
-            <a href="DeviceManage.html">
-                <div class="item">
-                    <div class="light"></div>
-                    <div class="licon"><img src="img/control-center.png" height="50" width="50"></div>
-                    <div class="con">设备管理</div>
-                    <div class="ricon"></div>
-                </div>
-            </a>
-            <a href="DataManage.html">
-                <div class="item">
-                    <div class="light"></div>
-                    <div class="licon"><img src="img/analysis.png" height="50" width="50"></div>
-                    <div class="con">数据信息管理</div>
-                    <div class="ricon"></div>
-                </div>
-            </a>
-            <a href="ApplianceControl.html">
-                <div class="item">
-                    <div class="light"></div>
-                    <div class="licon"><img src="img/smart-fridge.png" height="50" width="50"></div>
-                    <div class="con">家电控制</div>
-                    <div class="ricon"></div>
-                </div>
-            </a>
-            <a href="VideoMonitor.html">
-                <div class="item">
-                    <div class="light"></div>
-                    <div class="licon"><img src="img/social-media.png" height="50" width="50"></div>
-                    <div class="con">视频监控</div>
-                    <div class="ricon"></div>
-                </div>
-            </a>
-            <a href="Message.html">
-                <div class="item">
-                    <div class="light"></div>
-                    <div class="licon"><img src="img/messages.png" height="50" width="50"></div>
-                    <div class="con">消息推送</div>
-                    <div class="ricon"></div>
-                </div>
-            </a>
-            <a href="index.html">
-                <div class="item">
-                    <div class="light"></div>
-                    <div class="licon"><img src="img/check-out.png" height="50" width="50"></div>
-                    <div class="con">退出</div>
-                    <div class="ricon"></div>
-                </div>
-            </a>
-        </div>
-        <div class="line"></div>
-    </div>
-    <div class="rig">
-        <div class="todo-box-wrap">
-            <ul class="todo-list todo-box-nicescroll-bar">
-                <li class="todo-item">
-                    <div class="checkbox checkbox-default">
-                        <input type="checkbox" id="checkbox001">
-                        <label for="checkbox001">Record The First Episode</label>
-                    </div>
-                </li>
-                <li>
-                    <hr class="light-grey-hr">
-                </li>
-                <li class="todo-item">
-                    <div class="checkbox checkbox-pink">
-                        <input type="checkbox" id="checkbox002">
-                        <label for="checkbox002">Prepare The Conference Schedule</label>
-                    </div>
-                </li>
-                <li>
-                    <hr class="light-grey-hr">
-                </li>
-                <li class="todo-item">
-                    <div class="checkbox checkbox-warning">
-                        <input type="checkbox" id="checkbox003">
-                        <label for="checkbox003">Decide The Live Discussion Time</label>
-                    </div>
-                </li>
-                <li>
-                    <hr class="light-grey-hr">
-                </li>
-                <li class="todo-item">
-                    <div class="checkbox checkbox-success">
-                        <input type="checkbox" id="checkbox004">
-                        <label for="checkbox004">Prepare For The Next Project</label>
-                    </div>
-                </li>
-                <li>
-                    <hr class="light-grey-hr">
-                </li>
-                <li class="todo-item">
-                    <div class="checkbox checkbox-danger">
-                        <input type="checkbox" id="checkbox005">
-                        <label for="checkbox005">Finish Up AngularJs Tutorial</label>
-                    </div>
-                </li>
-                <li>
-                    <hr class="light-grey-hr">
-                </li>
-                <li class="todo-item">
-                    <div class="checkbox checkbox-purple">
-                        <input type="checkbox" id="checkbox006">
-                        <label for="checkbox006">Finish Infinity Project</label>
-                    </div>
-                </li>
-                <li>
-                    <hr class="light-grey-hr">
-                </li>
-            </ul>
+        <div class="rig">
+            <main class="grid">
+                <section class="content item1">
+                    <h1>信息推送</h1>
+                    <p>Information push</p>
+                </section>
+                <section class="card item2">
+                    <h2>Hover the cards<h2>
+                            <input id="chck" type="checkbox">
+                            <label for="chck" class="check-trail">
+                                <span class="check-handler"></span>
+                            </label>
+                </section>
+                <section class="card item3"></section>
+                <section class="card item4"></section>
+                <section class="card item5">
+                    <h2>because interactions make it more fun<h2>
+                            <input id="chck" type="checkbox">
+                            <label for="chck" class="check-trail">
+                                <span class="check-handler"></span>
+                            </label>
+                </section>
+                <section class="card item7"></section>
+                <section class="card item8">
+                    <h2>animating the shadow on the pseudo element makes it pop out<h2>
+                </section>
+                <section class="card item9"></section>
+                <section class="card item10"></section>
+                <section class="card item11">
+                    <h2>add a :focus state too!<h2>
+                        <input id="chck" type="checkbox">
+                        <label for="chck" class="check-trail">
+                            <span class="check-handler"></span>
+                        </label>
+                </section>
+                <!-- <section class="card item 12">
+                    <h2>hello</h2>
+                </section> -->
+            </main>
         </div>
     </div>
-</div>
+    </div>
 </body>
 
 </html>

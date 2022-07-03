@@ -11,9 +11,13 @@
             /* left: 450px; */
             /* margin: 20px; */
             /* bottom: 40px; */
+            margin-top: 70px;
+            margin-right: 10px;
+            margin-left: 10px;
             display: block;
             width: 250px;
-            height: 100px;
+            height: 200px;
+            float: left;
             /* font: 900 25px ''; */
             /* text-decoration: none; */
             line-height: 50px;
@@ -26,6 +30,7 @@
             border-radius: 10px;
             width: 1500px;
             overflow: hidden;
+            margin-bottom: 10px;
         }
     </style>
 </head>
@@ -103,14 +108,21 @@
         </div>
         <div class="rig">
             <div class="g">
+                <p>"</p>
                 <p style="font-size: 50px;">5 G</p>
                 <p>累计使用流量</p>
             </div>
             <div class="g">
+                <p>"</p>
                 <p style="font-size: 50px;">5 G</p>
                 <p>累计使用流量</p>
             </div>
-            <div class="main" id="main" style="width: 1000px; height: 400px;"></div>
+            <div class="g">
+                <p>"</p>
+                <p style="font-size: 50px;">5 G</p>
+                <p>累计使用流量</p>
+            </div>
+            <div class="main" id="main" style="width: 600px; height: 400px; margin-left: 650px;"></div>
             <div class="data">
                 <ul>
                     <div class="item_data">
@@ -128,9 +140,9 @@
                         </div>
                     </div>
                     <div class="item_data">
-                        <div id="title" style="height:50px;background-color: rgb(250,200,88);"
-                            onclick="onTileClick2()">rose3</div>
-                        <div id="content2" style="height: 0px;background-color: #cce1e2;transition: height 0.2s;">
+                        <div id="title" style="height:50px;background-color: rgb(250,200,88);" onclick="onTileClick3()">
+                            rose3</div>
+                        <div id="content3" style="height: 0px;background-color: #cce1e2;transition: height 0.2s;">
                             <div class="da1" id="da1" style="width: 1000px; height: 500px;"></div>
                         </div>
                     </div>
@@ -149,22 +161,22 @@
                         </div>
                     </div>
                     <div class="item_data">
-                        <div id="title" style="height:50px;background-color: rgb(59,162,114);"
-                            onclick="onTileClick5()">rose6</div>
+                        <div id="title" style="height:50px;background-color: rgb(59,162,114);" onclick="onTileClick5()">
+                            rose6</div>
                         <div id="content5" style="height: 0px;background-color: #cce1e2;transition: height 0.2s;">
                             <div class="da1" id="da1" style="width: 1000px; height: 500px;"></div>
                         </div>
                     </div>
                     <div class="item_data">
-                        <div id="title" style="height:50px;background-color: rgb(252,132,82);"
-                            onclick="onTileClick6()">rose7</div>
+                        <div id="title" style="height:50px;background-color: rgb(252,132,82);" onclick="onTileClick6()">
+                            rose7</div>
                         <div id="content6" style="height: 0px;background-color: #cce1e2;transition: height 0.2s;">
                             <div class="da1" id="da1" style="width: 1000px; height: 500px;"></div>
                         </div>
                     </div>
                     <div class="item_data">
-                        <div id="title" style="height:50px;background-color: rgb(154,96,180);"
-                            onclick="onTileClick7()">rose8</div>
+                        <div id="title" style="height:50px;background-color: rgb(154,96,180);" onclick="onTileClick7()">
+                            rose8</div>
                         <div id="content7" style="height: 0px;background-color: #cce1e2;transition: height 0.2s;">
                             <div class="da1" id="da1" style="width: 1000px; height: 500px;"></div>
                         </div>
@@ -179,11 +191,11 @@
 
         // 指定图表的配置项和数据
         var option = {
-            title: {
-                text: 'Nightingale Chart',
-                subtext: 'Fake Data',
-                left: 'center'
-            },
+            // title: {
+            //     text: 'Nightingale Chart',
+            //     subtext: 'Fake Data',
+            //     left: 'center'
+            // },
             tooltip: {
                 trigger: 'item',
                 formatter: '{a} <br/>{b} : {c} ({d}%)'
@@ -251,7 +263,7 @@
     </script>
     <script type="text/javascript">
         var content5 = document.getElementById("content5");
-        function onTileClick5() { content1.style.height = content1.offsetHeight === 600 ? 0 + 'px' : 600 + 'px'; }
+        function onTileClick5() { content5.style.height = content5.offsetHeight === 600 ? 0 + 'px' : 600 + 'px'; }
     </script>
     <script type="text/javascript">
         var content6 = document.getElementById("content6");

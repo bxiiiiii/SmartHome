@@ -2,86 +2,589 @@
 <html>
 
 <head>
-    <meta charset="UTF-8"/>
-    <link rel="stylesheet" href="css/style.css"/>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="css/style.css" />
     <style>
+        .g {
+            /* position: absolute; */
+            /* left: 450px; */
+            margin: 20px;
+            /* bottom: 40px; */
+            float: left;
+            display: block;
+            width: 250px;
+            height: 500px;
+            /* font: 900 25px ''; */
+            /* text-decoration: none; */
+            line-height: 50px;
+            border-radius: 20px;
+            background-image: linear-gradient(to right, rgba(240, 192, 169, 255), rgba(247, 145, 140, 255));
+            text-align: center;
+        }
+
+        .item_data {
+            border-radius: 10px;
+            width: 1500px;
+            overflow: hidden;
+        }
+
+        /* Reset */
+        *,
+        *::after,
+        *::before {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-size: 62.5%;
+        }
+
+        @media (max-width: 75em) {
+            html {
+                font-size: 56.25%;
+            }
+        }
+
+        @media (max-width: 56.25em) {
+            html {
+                font-size: 50%;
+            }
+        }
+
+        @media (min-width: 112.5em) {
+            html {
+                font-size: 75%;
+            }
+        }
+
+        body {
+            height: 100vh;
+            background-color: #ece0e8;
+        }
+
+        .artboard {
+            display: flex;
+            flex-flow: row;
+            align-items: center;
+            /* justify-content: center; */
+            padding: 4rem;
+            height: 100%;
+            position: relative;
+        }
+
+        @media (max-width: 37.5em) {
+            .artboard {
+                padding: 1rem;
+            }
+        }
+
+        .card {
+            flex: initial;
+            /* position: relative; */
+            height: 80%;
+            width: 30%;
+            -moz-perspective: 200rem;
+            perspective: 200rem;
+            margin: 2rem;
+            float: left;
+            /* border-radius: 40px; */
+        }
+
+        .card__side {
+            height: 52rem;
+            transition: all 0.8s ease;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            -webkit-backface-visibility: hidden;
+            /* We don't want to see the back part of the element. */
+            backface-visibility: hidden;
+            /* We don't want to see the back part of the element. */
+            border-radius: 3px;
+            overflow: hidden;
+            /* The image is overflowing the parent. */
+            box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.15);
+        }
+
+        .card__side--front {
+            background-image: linear-gradient(to right bottom, rgba(30, 11, 54, 0.65), rgba(202, 55, 130, 0.7)), url(https://cdn.spacetelescope.org/archives/images/screen/heic0406a.jpg);
+        }
+
+        .card__side--back {
+            background-color: #fff;
+            transform: rotateY(180deg);
+        }
+
+        .card:hover .card__side--back {
+            transform: rotateY(0);
+        }
+
+        .card:hover .card__side--front {
+            transform: rotateY(-180deg);
+        }
+
+        .card__theme {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            top: 54%;
+            width: 90%;
+            text-align: center;
+        }
+
+        .card__theme-box {
+            color: #fff;
+            margin-bottom: 8rem;
+        }
+
+        .card__subject {
+            font-family: "Inconsolata", monospace;
+            letter-spacing: 0.8rem;
+            font-size: 1.6rem;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+
+        .card__title {
+            font-family: "VT323", monospace;
+            text-transform: uppercase;
+            font-size: 6rem;
+            font-weight: 100;
+        }
+
+        .card__cover {
+            position: relative;
+            background-size: cover;
+            height: 14rem;
+            -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+            border-top-left-radius: 3px;
+            border-top-right-radius: 3px;
+            background-image: linear-gradient(to top right, rgba(30, 11, 54, 0.65), rgba(202, 55, 130, 0.65)), url(https://cdn.spacetelescope.org/archives/images/screen/heic0406a.jpg);
+        }
+
+        .card__heading {
+            text-align: center;
+            color: #fff;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 75%;
+        }
+
+        .card__heading-span {
+            font-family: "VT323", monospace;
+            font-size: 4.2rem;
+            font-weight: 300;
+            text-transform: uppercase;
+            padding: 1rem 1.5rem;
+            color: #fff;
+        }
+
+        .card__details {
+            font-family: "Inconsolata", monospace;
+            padding: 4rem 2rem;
+        }
+
+        .card__details ul {
+            list-style: none;
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        .card__details ul li {
+            text-align: center;
+            font-size: 1.8rem;
+            padding: 1rem;
+        }
+
+        .card__details ul li:not(:last-child) {
+            border-bottom: 1px solid #eee;
+        }
+
+        /* @media only screen and (max-width: 37.5em),
+        only screen and (hover: none) {
+            .card {
+                height: auto;
+                border-radius: 3px;
+                background-color: #fff;
+                box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.15);
+            }
+
+            .card__side {
+                height: auto;
+                position: relative;
+                box-shadow: none;
+            }
+
+            .card__side--front {
+                clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+            }
+
+            .card__side--back {
+                transform: rotateY(0);
+            }
+
+            .card:hover .card__side--front {
+                transform: rotateY(0);
+            }
+
+            .card__details {
+                padding: 3rem 2rem;
+            }
+
+            .card__theme {
+                position: relative;
+                top: 0;
+                left: 0;
+                transform: translate(0);
+                width: 100%;
+                padding: 5rem 4rem 1.5rem 4rem;
+                text-align: right;
+            }
+
+            .card__theme-box {
+                margin-bottom: 1.5rem;
+            }
+
+            .card__title {
+                font-size: 4rem;
+            }
+        } */
     </style>
 </head>
 
 <body>
-<div class="wrap">
-    <div class="nav">
-        <div class="btn">
-            <div class="btn-item"></div>
-            <div class="btn-item"></div>
-            <div class="btn-item"></div>
+    <div class="wrap">
+        <div class="nav">
+            <div class="btn">
+                <div class="btn-item"></div>
+                <div class="btn-item"></div>
+                <div class="btn-item"></div>
+            </div>
+            <div class="icon">
+                <div class="icon-img"><img src="img/pic.jpg"></div>
+                <div class="icon-con">
+                    <p>Xiong Junjie</p>
+                    <h2>School of Computer Software 2003</h2>
+                </div>
+            </div>
+            <div class="line"></div>
+            <div class="title">
+                <p>Query</p>
+            </div>
+            <div class="menu">
+                <a href="DeviceManage.html">
+                    <div class="item">
+                        <div class="light"></div>
+                        <div class="licon"><img src="img/control-center.png" height="50" width="50"></div>
+                        <div class="con">设备管理</div>
+                        <div class="ricon"></div>
+                    </div>
+                </a>
+                <a href="DataManage.html">
+                    <div class="item">
+                        <div class="light"></div>
+                        <div class="licon"><img src="img/analysis.png" height="50" width="50"></div>
+                        <div class="con">数据信息管理</div>
+                        <div class="ricon"></div>
+                    </div>
+                </a>
+                <a href="ApplianceControl.html">
+                    <div class="item">
+                        <div class="light"></div>
+                        <div class="licon"><img src="img/smart-fridge.png" height="50" width="50"></div>
+                        <div class="con">家电控制</div>
+                        <div class="ricon"></div>
+                    </div>
+                </a>
+                <a href="VideoMonitor.html">
+                    <div class="item">
+                        <div class="light"></div>
+                        <div class="licon"><img src="img/social-media.png" height="50" width="50"></div>
+                        <div class="con">视频监控</div>
+                        <div class="ricon"></div>
+                    </div>
+                </a>
+                <a href="Message.html">
+                    <div class="item">
+                        <div class="light"></div>
+                        <div class="licon"><img src="img/messages.png" height="50" width="50"></div>
+                        <div class="con">消息推送</div>
+                        <div class="ricon"></div>
+                    </div>
+                </a>
+                <a href="index.html">
+                    <div class="item">
+                        <div class="light"></div>
+                        <div class="licon"><img src="img/check-out.png" height="50" width="50"></div>
+                        <div class="con">退出</div>
+                        <div class="ricon"></div>
+                    </div>
+                </a>
+            </div>
+            <div class="line"></div>
         </div>
-        <div class="icon">
-            <div class="icon-img"><img src="img/pic.jpg"></div>
-            <div class="icon-con">
-                <p>Xiong Junjie</p>
-                <h2>School of Computer Software 2003</h2>
+        <div class="rig">
+            <!-- <div class="artboard"> -->
+                <div class="card">
+
+                    <div class="card__side card__side--back">
+                        <div class="card__cover">
+                            <h4 class="card__heading">
+                                <span class="card__heading-span">Skill Set</span>
+                            </h4>
+                        </div>
+                        <div class="card__details">
+                            <ul>
+                                <li>Advanced JS and CSS</li>
+                                <li>JS/CSS Preprocessors</li>
+                                <li>JS Frameworks</li>
+                                <li>Advanced Animations</li>
+                                <li>Deployment Pipelines</li>
+                                <li>Large Apps Architectures</li>
+                                <li>Naming Conventions</li>
+                            </ul>
+                        </div>
+                    </div>
+    
+                    <div class="card__side card__side--front">
+                        <div class="card__theme">
+                            <div class="card__theme-box">
+                                <p class="card__subject">Web Developer</p>
+                                <p class="card__title">Hello World!</p>
+                            </div>
+                        </div>
+                    </div>
+    
+                </div>
+                <div class="card">
+
+                    <div class="card__side card__side--back">
+                        <div class="card__cover">
+                            <h4 class="card__heading">
+                                <span class="card__heading-span">Skill Set</span>
+                            </h4>
+                        </div>
+                        <div class="card__details">
+                            <ul>
+                                <li>Advanced JS and CSS</li>
+                                <li>JS/CSS Preprocessors</li>
+                                <li>JS Frameworks</li>
+                                <li>Advanced Animations</li>
+                                <li>Deployment Pipelines</li>
+                                <li>Large Apps Architectures</li>
+                                <li>Naming Conventions</li>
+                            </ul>
+                        </div>
+                    </div>
+    
+                    <div class="card__side card__side--front">
+                        <div class="card__theme">
+                            <div class="card__theme-box">
+                                <p class="card__subject">Web Developer</p>
+                                <p class="card__title">Hello World!</p>
+                            </div>
+                        </div>
+                    </div>
+    
+                </div>
+                <div class="card">
+
+                    <div class="card__side card__side--back">
+                        <div class="card__cover">
+                            <h4 class="card__heading">
+                                <span class="card__heading-span">Skill Set</span>
+                            </h4>
+                        </div>
+                        <div class="card__details">
+                            <ul>
+                                <li>Advanced JS and CSS</li>
+                                <li>JS/CSS Preprocessors</li>
+                                <li>JS Frameworks</li>
+                                <li>Advanced Animations</li>
+                                <li>Deployment Pipelines</li>
+                                <li>Large Apps Architectures</li>
+                                <li>Naming Conventions</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="card__side card__side--front">
+                        <div class="card__theme">
+                            <div class="card__theme-box">
+                                <p class="card__subject">Web Developer</p>
+                                <p class="card__title">Hello World!</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            <!-- </div> -->
+            <div class="card">
+
+                <div class="card__side card__side--back">
+                    <div class="card__cover">
+                        <h4 class="card__heading">
+                            <span class="card__heading-span">Skill Set</span>
+                        </h4>
+                    </div>
+                    <div class="card__details">
+                        <ul>
+                            <li>Advanced JS and CSS</li>
+                            <li>JS/CSS Preprocessors</li>
+                            <li>JS Frameworks</li>
+                            <li>Advanced Animations</li>
+                            <li>Deployment Pipelines</li>
+                            <li>Large Apps Architectures</li>
+                            <li>Naming Conventions</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card__side card__side--front">
+                    <div class="card__theme">
+                        <div class="card__theme-box">
+                            <p class="card__subject">Web Developer</p>
+                            <p class="card__title">Hello World!</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="card">
+
+                <div class="card__side card__side--back">
+                    <div class="card__cover">
+                        <h4 class="card__heading">
+                            <span class="card__heading-span">Skill Set</span>
+                        </h4>
+                    </div>
+                    <div class="card__details">
+                        <ul>
+                            <li>Advanced JS and CSS</li>
+                            <li>JS/CSS Preprocessors</li>
+                            <li>JS Frameworks</li>
+                            <li>Advanced Animations</li>
+                            <li>Deployment Pipelines</li>
+                            <li>Large Apps Architectures</li>
+                            <li>Naming Conventions</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card__side card__side--front">
+                    <div class="card__theme">
+                        <div class="card__theme-box">
+                            <p class="card__subject">Web Developer</p>
+                            <p class="card__title">Hello World!</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="card">
+
+                <div class="card__side card__side--back">
+                    <div class="card__cover">
+                        <h4 class="card__heading">
+                            <span class="card__heading-span">Skill Set</span>
+                        </h4>
+                    </div>
+                    <div class="card__details">
+                        <ul>
+                            <li>Advanced JS and CSS</li>
+                            <li>JS/CSS Preprocessors</li>
+                            <li>JS Frameworks</li>
+                            <li>Advanced Animations</li>
+                            <li>Deployment Pipelines</li>
+                            <li>Large Apps Architectures</li>
+                            <li>Naming Conventions</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card__side card__side--front">
+                    <div class="card__theme">
+                        <div class="card__theme-box">
+                            <p class="card__subject">Web Developer</p>
+                            <p class="card__title">Hello World!</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div> <div class="card">
+
+                <div class="card__side card__side--back">
+                    <div class="card__cover">
+                        <h4 class="card__heading">
+                            <span class="card__heading-span">Skill Set</span>
+                        </h4>
+                    </div>
+                    <div class="card__details">
+                        <ul>
+                            <li>Advanced JS and CSS</li>
+                            <li>JS/CSS Preprocessors</li>
+                            <li>JS Frameworks</li>
+                            <li>Advanced Animations</li>
+                            <li>Deployment Pipelines</li>
+                            <li>Large Apps Architectures</li>
+                            <li>Naming Conventions</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card__side card__side--front">
+                    <div class="card__theme">
+                        <div class="card__theme-box">
+                            <p class="card__subject">Web Developer</p>
+                            <p class="card__title">Hello World!</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div> <div class="card">
+
+                <div class="card__side card__side--back">
+                    <div class="card__cover">
+                        <h4 class="card__heading">
+                            <span class="card__heading-span">Skill Set</span>
+                        </h4>
+                    </div>
+                    <div class="card__details">
+                        <ul>
+                            <li>Advanced JS and CSS</li>
+                            <li>JS/CSS Preprocessors</li>
+                            <li>JS Frameworks</li>
+                            <li>Advanced Animations</li>
+                            <li>Deployment Pipelines</li>
+                            <li>Large Apps Architectures</li>
+                            <li>Naming Conventions</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card__side card__side--front">
+                    <div class="card__theme">
+                        <div class="card__theme-box">
+                            <p class="card__subject">Web Developer</p>
+                            <p class="card__title">Hello World!</p>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
-        <div class="line"></div>
-        <div class="title">
-            <p>Query</p>
-        </div>
-        <div class="menu">
-            <a href="DeviceManage.html">
-                <div class="item">
-                    <div class="light"></div>
-                    <div class="licon"><img src="img/control-center.png" height="50" width="50"></div>
-                    <div class="con">设备管理</div>
-                    <div class="ricon"></div>
-                </div>
-            </a>
-            <a href="DataManage.html">
-                <div class="item">
-                    <div class="light"></div>
-                    <div class="licon"><img src="img/analysis.png" height="50" width="50"></div>
-                    <div class="con">数据信息管理</div>
-                    <div class="ricon"></div>
-                </div>
-            </a>
-            <a href="ApplianceControl.html">
-                <div class="item">
-                    <div class="light"></div>
-                    <div class="licon"><img src="img/smart-fridge.png" height="50" width="50"></div>
-                    <div class="con">家电控制</div>
-                    <div class="ricon"></div>
-                </div>
-            </a>
-            <a href="VideoMonitor.html">
-                <div class="item">
-                    <div class="light"></div>
-                    <div class="licon"><img src="img/social-media.png" height="50" width="50"></div>
-                    <div class="con">视频监控</div>
-                    <div class="ricon"></div>
-                </div>
-            </a>
-            <a href="Message.html">
-                <div class="item">
-                    <div class="light"></div>
-                    <div class="licon"><img src="img/messages.png" height="50" width="50"></div>
-                    <div class="con">消息推送</div>
-                    <div class="ricon"></div>
-                </div>
-            </a>
-            <a href="index.html">
-                <div class="item">
-                    <div class="light"></div>
-                    <div class="licon"><img src="img/check-out.png" height="50" width="50"></div>
-                    <div class="con">退出</div>
-                    <div class="ricon"></div>
-                </div>
-            </a>
-        </div>
-        <div class="line"></div>
-    </div>
-    <div class="rig">
-    </div>
-</div>
+
+        <script type="text/javascript">
+            var content = document.getElementById("content");
+            function onTileClick() { content.style.height = content.offsetHeight === 600 ? 0 + 'px' : 600 + 'px'; }
+        </script>
 </body>
 
 </html>

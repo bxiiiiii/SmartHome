@@ -190,9 +190,10 @@
 
 .rig {
     /* position: relative; */
-    width: 1300px;
+    width: 1500px;
     height: 820px;
-    margin: auto 300px;
+    /* margin: auto 300px; */
+    margin-left: 300px;
     /* background: rgba(36, 15, 15, 0.8); */
     /* background: rgba(124, 152, 133, 0.8); */
     /* background: rgba(0, 0, 0, 0.8); */
