@@ -21,6 +21,6 @@ public class TestServlet extends HttpServlet{
         String password = req.getParameter("password");
         String account = req.getParameter("account");
         System.out.println(name+password+account);
-        resp.sendRedirect("DeviceManage.html");
+        resp.sendRedirect("DataManage.html");
     }
 }

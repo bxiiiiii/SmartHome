@@ -16,7 +16,7 @@
             margin-left: 10px;
             display: block;
             width: 250px;
-            height: 200px;
+            height: 150px;
             float: left;
             /* font: 900 25px ''; */
             /* text-decoration: none; */
@@ -30,6 +30,22 @@
             border-radius: 10px;
             width: 1500px;
             overflow: hidden;
+            margin-bottom: 10px;
+        }
+
+        .da {
+            width: 1000px;
+            height: 500px;
+            margin: auto;
+            left: 1500px;
+            float: left;
+        }
+
+        .titlee {
+            text-align: center;
+        }
+
+        .ll {
             margin-bottom: 10px;
         }
     </style>
@@ -47,12 +63,12 @@
                 <div class="icon-img"><img src="img/pic.jpg"></div>
                 <div class="icon-con">
                     <p>Xiong Junjie</p>
-                    <h2>School of Computer Software 2003</h2>
+                    <h2>智能家居管理系统</h2>
                 </div>
             </div>
             <div class="line"></div>
             <div class="title">
-                <p>Query</p>
+                <p>Smart Home</p>
             </div>
             <div class="menu">
                 <a href="DeviceManage.html">
@@ -108,77 +124,184 @@
         </div>
         <div class="rig">
             <div class="g">
-                <p>"</p>
-                <p style="font-size: 50px;">5 G</p>
+                <p>&nbsp;</p>
+                <p style="font-size: 50px;">5</p>
+                <p>&nbsp;</p>
+                <p>设备总个数</p>
+            </div>
+            <div class="g">
+                <p>&nbsp;</p>
+                <p style="font-size: 50px;">64 G</p>
+                <p>&nbsp;</p>
                 <p>累计使用流量</p>
             </div>
             <div class="g">
-                <p>"</p>
-                <p style="font-size: 50px;">5 G</p>
-                <p>累计使用流量</p>
-            </div>
-            <div class="g">
-                <p>"</p>
-                <p style="font-size: 50px;">5 G</p>
-                <p>累计使用流量</p>
+                <p>&nbsp;</p>
+                <p style="font-size: 50px;">3</p>
+                <p>&nbsp;</p>
+                <p>正在运行设备个数</p>
             </div>
             <div class="main" id="main" style="width: 600px; height: 400px; margin-left: 650px;"></div>
             <div class="data">
                 <ul>
                     <div class="item_data">
-                        <div id="title" style="height:50px;background-color:rgb(60, 112, 198);" onclick="onTileClick()">
-                            rose1</div>
-                        <div id="content" style="height: 0px;background-color: #cce1e2;transition: height 0.2s;">
-                            <div class="da" id="da" style="width: 1000px; height: 500px;"></div>
+                        <div class="titlee" style="height:50px;background-color:rgb(60, 112, 198);">
+                            智能晾衣机</div>
+                        <div id="content" style="height: 500px;background-color: #cce1e2;transition: height 0.2s;">
+                            <div class="da" id="da"></div>
+                            <div class="description">
+                                <li class="ll">产品名称 &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Aqara
+                                    智能晾衣机</li>
+                                <li class="ll">主机尺寸 &nbsp; &nbsp;
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1300×300×75mm</li>
+                                <li class="ll">晾干尺寸 &nbsp; &nbsp;
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2200×547×57mm
+                                </li>
+                                <li class="ll">升降高度 &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;24W
+                                </li>
+                                <li class="ll">额定功率 &nbsp; &nbsp;
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;≤950W
+                                </li>
+                                <li class="ll">工作湿度 &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0~95%
+                                    RH，无冷凝
+                                </li>
+                                <li class="ll">最大负重 &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    35kg
+                                </li>
+                                <li class="ll">工作温度 &nbsp; &nbsp;
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-10℃~+40℃</li>
+                                <li class="ll">CMIITID &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+                                    &nbsp;&nbsp;2018DP6467</li>
+                                <li class="ll">无线连接 &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    Wi-Fi iEEE 802.11 b/g/n 2.4GHz、BLE</li>
+                            </div>
                         </div>
                     </div>
                     <div class="item_data">
-                        <div id="title" style="height:50px;background-color: rgb(145, 204, 117);"
-                            onclick="onTileClick1()">rose2</div>
-                        <div id="content1" style="height: 0px;background-color: #cce1e2;transition: height 0.2s;">
-                            <div class="da1" id="da1" style="width: 1000px; height: 500px;"></div>
+                        <div class="titlee" style="height:50px;background-color: rgb(145, 204, 117);">智能摄像头门锁</div>
+                        <div id="content1" style="height: 500px;background-color: #cce1e2;transition: height 0.2s;">
+                            <div class="da" id="da1"></div>
+                            <div class="description">
+                                <li class="ll">产品名称 &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Aqara
+                                    智能摄像头门锁 P100</li>
+                                <li class="ll">产品尺寸 &nbsp; &nbsp;
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;400.6mm*78.6mm*28.7mm(面板)</li>
+                                <li class="ll">产品材质 &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;铝合金
+                                </li>
+                                <li class="ll">产品颜色 &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;星空灰
+                                </li>
+                                <li class="ll">产品净重 &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4.6kg
+                                </li>
+                                <li class="ll">工作湿度 &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0~93%
+                                    RH，无冷凝</li>
+                                <li class="ll">指纹容量 &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;50枚
+                                </li>
+                                <li class="ll">工作温度 &nbsp; &nbsp;
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-10℃~+55℃</li>
+                                <li class="ll">NFC设备容量 &nbsp; &nbsp; &nbsp;25个NFC</li>
+                                <li class="ll">密码容量 &nbsp; &nbsp;
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;50组永久密码，25组周期密码，8组一次性密码</li>
+                                <li class="ll">供电方式 &nbsp; &nbsp;
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6000mAh锂电池（3.8V）
+                                    、4节5号AA电池（6V）、Type-C 应急供电（5V）</li>
+                                <li class="ll">CMIITID &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+                                    &nbsp;&nbsp;2020DP1741</li>
+                                <li class="ll">无线连接 &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Zigbee
+                                    3.0、Wi-Fi IEEE 802.11 b/g/n 2.4GHz、蓝牙 5.0</li>
+                            </div>
                         </div>
                     </div>
                     <div class="item_data">
-                        <div id="title" style="height:50px;background-color: rgb(250,200,88);" onclick="onTileClick3()">
-                            rose3</div>
-                        <div id="content3" style="height: 0px;background-color: #cce1e2;transition: height 0.2s;">
-                            <div class="da1" id="da1" style="width: 1000px; height: 500px;"></div>
+                        <div class="titlee" style="height:50px;background-color: rgb(250,200,88);">光艺晴空灯</div>
+                        <div id="content3" style="height: 500px;background-color: #cce1e2;transition: height 0.2s;">
+                            <div class="da" id="da2"></div>
+                            <div class="description">
+                                <li class="ll">产品名称 &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;光艺晴空灯
+                                    H1</li>
+                                <li class="ll">产品尺寸 &nbsp; &nbsp;
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1195mm*595mm*200mm</li>
+                                <li class="ll">光通量 &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2800lm@6500K
+                                </li>
+                                <li class="ll">蓝光等级 &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RG0
+                                </li>
+                                <li class="ll">产品净重 &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;19.9kg
+                                </li>
+                                <li class="ll">色温范围 &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2700K
+                                    ~ 6500K
+                                    RH，无冷凝</li>
+                                <li class="ll">工作温度 &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-20°C
+                                    ~ 40°C
+                                </li>
+                                <li class="ll">工作湿度 &nbsp; &nbsp;
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0℃ ~ 90℃RH，无冷凝</li>
+                                <li class="ll">NFC设备容量 &nbsp; &nbsp; &nbsp;25个NFC</li>
+                                <li class="ll">灯珠 &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;72个双色温灯珠</li>
+                                <li class="ll">显色指数 &nbsp; &nbsp;
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ra >= 90</li>
+                                <li class="ll">防护等级 &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
+                                    &nbsp;&nbsp;IP40</li>
+                                <li class="ll">无线连接 &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Zigbee
+                                </li>
+                            </div>
                         </div>
                     </div>
                     <div class="item_data">
-                        <div id="title" style="height:50px;background-color: rgb(238,102,102);"
-                            onclick="onTileClick3()">rose4</div>
-                        <div id="content3" style="height: 0px;background-color: #cce1e2;transition: height 0.2s;">
-                            <div class="da1" id="da1" style="width: 1000px; height: 500px;"></div>
+                        <div class="titlee" style="height:50px;background-color: rgb(238,102,102);">智能宠物喂食器</div>
+                        <div id="content3" style="height: 500px;background-color: #cce1e2;transition: height 0.2s;">
+                            <div class="da" id="da3"></div>
+                            <div class="description">
+                                <li class="ll">产品名称 &nbsp; &nbsp;
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;智能宠物喂食器 C1</li>
+                                <li class="ll">产品尺寸 &nbsp; &nbsp;
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    193 x 193 x 312mm</li>
+                                <li class="ll">产品材质 &nbsp; &nbsp;
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;304不锈钢、ABS
+                                </li>
+                                <li class="ll">储存容量 &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4L
+                                </li>
+                                <li class="ll">噪音 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;40dB@1m
+                                </li>
+                                <li class="ll">工作湿度 &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;10% ~
+                                    90%RH</li>
+
+                                <li class="ll">工作温度 &nbsp; &nbsp;
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-10℃~55℃</li>
+
+                                <li class="ll">无线连接 &nbsp; &nbsp;
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Zigbee3.0</li>
+                            </div>
                         </div>
                     </div>
                     <div class="item_data">
-                        <div id="title" style="height:50px;background-color: rgb(115,192,222);"
-                            onclick="onTileClick4()">rose5</div>
-                        <div id="content4" style="height: 0px;background-color: #cce1e2;transition: height 0.2s;">
-                            <div class="da1" id="da1" style="width: 1000px; height: 500px;"></div>
-                        </div>
-                    </div>
-                    <div class="item_data">
-                        <div id="title" style="height:50px;background-color: rgb(59,162,114);" onclick="onTileClick5()">
-                            rose6</div>
-                        <div id="content5" style="height: 0px;background-color: #cce1e2;transition: height 0.2s;">
-                            <div class="da1" id="da1" style="width: 1000px; height: 500px;"></div>
-                        </div>
-                    </div>
-                    <div class="item_data">
-                        <div id="title" style="height:50px;background-color: rgb(252,132,82);" onclick="onTileClick6()">
-                            rose7</div>
-                        <div id="content6" style="height: 0px;background-color: #cce1e2;transition: height 0.2s;">
-                            <div class="da1" id="da1" style="width: 1000px; height: 500px;"></div>
-                        </div>
-                    </div>
-                    <div class="item_data">
-                        <div id="title" style="height:50px;background-color: rgb(154,96,180);" onclick="onTileClick7()">
-                            rose8</div>
-                        <div id="content7" style="height: 0px;background-color: #cce1e2;transition: height 0.2s;">
-                            <div class="da1" id="da1" style="width: 1000px; height: 500px;"></div>
+                        <div class="titlee" style="height:50px;background-color: rgb(115,192,222);">智能窗帘电机</div>
+                        <div id="content4" style="height: 500px;background-color: #cce1e2;transition: height 0.2s;">
+                            <div class="da" id="da4"></div>
+                            <div class="description">
+                                <li class="ll">产品名称 &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    Aqara 智能窗帘电机 C2</li>
+                                <li class="ll">电机类型 &nbsp; &nbsp;
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;开合帘电机</li>
+                                <li class="ll">额定功率
+                                    &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    19.2W
+                                </li>
+                                <li class="ll">电机尺寸 &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    44×61×296mm
+                                </li>
+
+                                <li class="ll">工作湿度 &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;10~90%
+                                    RH，无冷凝</li>
+
+                                <li class="ll">工作温度 &nbsp; &nbsp;
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-20℃~+55℃</li>
+
+                                <li class="ll">无线连接 &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Zigbee
+                                    3.0</li>
+                            </div>
                         </div>
                     </div>
                 </ul>
@@ -202,16 +325,13 @@
             },
             legend: {
                 left: 'center',
-                top: 'bottom',
+                // top: 'bottom',
                 data: [
-                    'rose1',
-                    'rose2',
-                    'rose3',
-                    'rose4',
-                    'rose5',
-                    'rose6',
-                    'rose7',
-                    'rose8'
+                    '智能晾衣机',
+                    '智能摄像头门锁',
+                    '光艺晴空灯',
+                    '智能宠物喂食器',
+                    '智能窗帘电机',
                 ]
             },
             series: [
@@ -225,14 +345,11 @@
                         borderRadius: 5
                     },
                     data: [
-                        { value: 30, name: 'rose 1' },
-                        { value: 28, name: 'rose 2' },
-                        { value: 26, name: 'rose 3' },
-                        { value: 24, name: 'rose 4' },
-                        { value: 22, name: 'rose 5' },
-                        { value: 20, name: 'rose 6' },
-                        { value: 18, name: 'rose 7' },
-                        { value: 16, name: 'rose 8' }
+                        { value: 30, name: '智能晾衣机' },
+                        { value: 28, name: '智能摄像头门锁' },
+                        { value: 26, name: '光艺晴空灯' },
+                        { value: 24, name: '智能宠物喂食器' },
+                        { value: 22, name: '智能窗帘电机' },
                     ]
                 }
             ]
@@ -240,38 +357,6 @@
 
         // 使用刚指定的配置项和数据显示图表。
         myChart.setOption(option);
-    </script>
-    <script type="text/javascript">
-        var content = document.getElementById("content");
-        function onTileClick() { content.style.height = content.offsetHeight === 600 ? 0 + 'px' : 600 + 'px'; }
-    </script>
-    <script type="text/javascript">
-        var content1 = document.getElementById("content1");
-        function onTileClick1() { content1.style.height = content1.offsetHeight === 600 ? 0 + 'px' : 600 + 'px'; }
-    </script>
-    <script type="text/javascript">
-        var content2 = document.getElementById("content2");
-        function onTileClick2() { content2.style.height = content2.offsetHeight === 600 ? 0 + 'px' : 600 + 'px'; }
-    </script>
-    <script type="text/javascript">
-        var content3 = document.getElementById("content3");
-        function onTileClick3() { content3.style.height = content3.offsetHeight === 600 ? 0 + 'px' : 600 + 'px'; }
-    </script>
-    <script type="text/javascript">
-        var content4 = document.getElementById("content4");
-        function onTileClick4() { content4.style.height = content4.offsetHeight === 600 ? 0 + 'px' : 600 + 'px'; }
-    </script>
-    <script type="text/javascript">
-        var content5 = document.getElementById("content5");
-        function onTileClick5() { content5.style.height = content5.offsetHeight === 600 ? 0 + 'px' : 600 + 'px'; }
-    </script>
-    <script type="text/javascript">
-        var content6 = document.getElementById("content6");
-        function onTileClick6() { content6.style.height = content6.offsetHeight === 600 ? 0 + 'px' : 600 + 'px'; }
-    </script>
-    <script type="text/javascript">
-        var content7 = document.getElementById("content7");
-        function onTileClick7() { content7.style.height = content7.offsetHeight === 600 ? 0 + 'px' : 600 + 'px'; }
     </script>
     <script type="text/javascript">
         var chartDom = document.getElementById('da');
@@ -296,6 +381,99 @@
 
         option && myChart.setOption(option);
     </script>
+    <script type="text/javascript">
+        var chartDom = document.getElementById('da1');
+        var myChart = echarts.init(chartDom);
+        var option;
+
+        option = {
+            xAxis: {
+                type: 'category',
+                data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+            },
+            yAxis: {
+                type: 'value'
+            },
+            series: [
+                {
+                    data: [124,250,137,146,157,200,50],
+                    type: 'line'
+                }
+            ]
+        };
+
+        option && myChart.setOption(option);
+    </script>
+    <script type="text/javascript">
+        var chartDom = document.getElementById('da2');
+        var myChart = echarts.init(chartDom);
+        var option;
+
+        option = {
+            xAxis: {
+                type: 'category',
+                data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+            },
+            yAxis: {
+                type: 'value'
+            },
+            series: [
+                {
+                    data: [177,960,631,567,864,333,486],
+                    type: 'line'
+                }
+            ]
+        };
+
+        option && myChart.setOption(option);
+    </script>
+    <script type="text/javascript">
+        var chartDom = document.getElementById('da3');
+        var myChart = echarts.init(chartDom);
+        var option;
+
+        option = {
+            xAxis: {
+                type: 'category',
+                data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+            },
+            yAxis: {
+                type: 'value'
+            },
+            series: [
+                {
+                    data: [147,500,46,250,137,189,163],
+                    type: 'line'
+                }
+            ]
+        };
+
+        option && myChart.setOption(option);
+    </script>
+    <script type="text/javascript">
+        var chartDom = document.getElementById('da4');
+        var myChart = echarts.init(chartDom);
+        var option;
+
+        option = {
+            xAxis: {
+                type: 'category',
+                data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+            },
+            yAxis: {
+                type: 'value'
+            },
+            series: [
+                {
+                    data: [150, 230, 224, 218, 135, 147, 260],
+                    type: 'line'
+                }
+            ]
+        };
+
+        option && myChart.setOption(option);
+    </script>
+
 </body>
 
 </html>

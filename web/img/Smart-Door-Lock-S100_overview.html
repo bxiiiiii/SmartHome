@@ -1,0 +1,2483 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Aqara"/>
+                <title> 全自动智能猫眼锁 星耀｜Aqara 绿米全屋智能</title>
+
+                <meta name="description" content="全自动智能猫眼锁 星耀 是 Aqara 首款支持定制的全屋智能猫眼门锁，十款外观搭配组合，独显你的个性主张。"/>
+
+                <meta name="keywords" content="门锁,智能门锁,小米智能门锁,绿米智能门锁,智能猫眼锁,全自动门锁,全自动智能门锁,全自动智能猫眼锁,全自动智能猫眼锁 星耀,Aqara 门锁"/>
+
+    <meta name="baidu-site-verification" content="code-RlhIowEoCo"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1" name="viewport"/>
+    <link rel="shortcut icon" href="https://aqara-offical-web-1300889962.cos.ap-guangzhou.myqcloud.com/img/favicon.ico" type="image/x-icon"/>
+    <script>
+        if ( /*@cc_on!@*/ false && document.documentMode === 10) document.documentElement.className += ' ie10';
+    </script>
+    <script>
+        if ( /*@cc_on!@*/ false && document.documentMode === 11) document.documentElement.className += ' ie11';
+    </script>
+
+
+    <link rel="stylesheet" href="https://aqara-offical-web-1300889962.cos.ap-guangzhou.myqcloud.com/css/style.css">
+    <link rel="stylesheet" href="https://aqara-offical-web-1300889962.cos.ap-guangzhou.myqcloud.com/css/support.css">
+                <link rel="stylesheet"
+                      href="https://cdn.aqara.com/cdn/website/mainland/static/lodash-4.17.15/common3.css?v=2.2.1"/>
+                <link rel="stylesheet" href="https://aqara-offical-web-1300889962.cos.ap-guangzhou.myqcloud.com/css/screen2.css?v=1.1.3"/>
+                <link rel="stylesheet" type="text/css" href="https://aqara-offical-web-1300889962.cos.ap-guangzhou.myqcloud.com/css/common1.css">
+                <link rel="stylesheet" href="https://aqara-offical-web-1300889962.cos.ap-guangzhou.myqcloud.com/css/screen.css?v=1.1.3"/>
+                <link rel="stylesheet"
+                      href="https://cdn.aqara.com/cdn/website/static/lodash-4.17.15/swiper.min.3.4.2.css"/>
+                <link rel="stylesheet" href="https://cdn.aqara.com/cdn/website/static/lodash-4.17.15/owl.carousel.css"/>
+                <link rel="stylesheet" href="https://aqara-offical-web-1300889962.cos.ap-guangzhou.myqcloud.com/js/fadeAnim.css">
+                <link rel="stylesheet" href="https://aqara-offical-web-1300889962.cos.ap-guangzhou.myqcloud.com/css/product.css">
+                <script type="text/javascript"
+                        src="https://cdn.aqara.com/cdn/website/static/lodash-4.17.15/jquery.min.js"></script>
+
+                <style type="text/css">
+                    .bgCor {
+                        background: #e6e6e6
+                    }
+
+                    .bgCor2 {
+                        background: #313236
+                    }
+
+                    .bgCor3 {
+                        background: #eaeaea
+                    }
+
+                    .bgCor4 {
+                        background: #e1e2e2
+                    }
+
+                    .bgCor5 {
+                        background: #dedede
+                    }
+
+                    .cjlist .coli, .mklist .ligrid {
+                        margin: 0px 7px;
+                        text-align: center;
+                    }
+
+                    .cjlist .coli {
+                        padding-bottom: 14px;
+                    }
+
+                    .cjlist .coli img {
+                        width: 50px;
+                    }
+
+                    .cjlist .coli .cbImg img {
+                        width: 55px;
+                        vertical-align: middle
+                    }
+
+                    .mklist li {
+                        position: relative;
+                    }
+
+                    .mklist li img {
+                        width: 49px;
+                    }
+
+                    .mklist .addIcon {
+                        width: 14px;
+                        height: 14px;
+                        position: absolute;
+                        top: 18px;
+                        right: -6px;
+                        background: url(https://cdn.aqara.com/cdn/website/static/images/icon-jia2.png) no-repeat center;
+                        background-size: 12px auto
+                    }
+
+                    .clock {
+                        width: 100%;
+                        text-align: center;
+                        padding: 20px 0px;
+                    }
+
+                    .clock .inlblock {
+                        display: inline-block;
+                        height: 50px;
+                    }
+
+                    .clock .cImg {
+                        width: 50px;
+                        float: left;
+                    }
+
+                    .clock .text {
+                        margin-left: 64px;
+                        color: #6c6c6c;
+                        text-align: left
+                    }
+
+                    .padox {
+                        padding: 15px 0px;
+                    }
+                </style>
+                <style type="text/css">
+                    .wrapper {
+                        height: 100%;
+                        box-sizing: border-box;
+                        -webkit-box-sizing: border-box;
+                        -moz-box-sizing: border-box;
+                    }
+
+                    .shux {
+                        width: 100%
+                    }
+
+                    .shux .t-grid {
+                        width: 20%;
+                        float: left;
+                        padding: 30px 0px;
+                        text-align: center;
+                        color: #fff
+                    }
+
+                    .shux::after {
+                        content: "";
+                        display: block;
+                        width: 100%;
+                        height: 2px;
+                        position: absolute;
+                        top: 50%;
+                        left: 0px;
+                        margin-top: -1px;
+                        background: #6779a0
+                    }
+
+                    .nfc-table {
+                        width: 51%;
+                        height: 100%;
+                        position: absolute;
+                        left: 0px;
+                        top: 0%;
+                        color: #fff
+                    }
+
+                    .ml-table {
+                        width: 30%;
+                        height: 100%;
+                        position: absolute;
+                        left: 10%;
+                        top: 0%;
+                        color: #333
+                    }
+
+                    .cogy {
+                        color: #595b5f
+                    }
+
+                    .faf {
+                        background: #fafafa
+                    }
+
+                    .black5 {
+                        background: #131515
+                    }
+
+                    .bgCor1 {
+                        background: #d5d8db
+                    }
+
+                    .bgCor2 {
+                        background: #202227
+                    }
+
+                    .bgCor3 {
+                        background: #9fa1a1
+                    }
+
+                    .shuxas {
+                        width: 100%;
+                        position: relative
+                    }
+
+                    .shuxas::before {
+                        content: "";
+                        display: block;
+                        width: 1px;
+                        height: 100%;
+                        position: absolute;
+                        top: 0px;
+                        left: 50%;
+                        background: #798bb3;
+                        background-image: linear-gradient(to bottom, #546c9e, #798bb3, #798bb3, #546c9e);
+                    }
+
+                    .shuxas ul, .icon-lb ul {
+                        display: -webkit-flex;
+                        display: flex;
+                        -webkit-flex-wrap: wrap;
+                        flex-wrap: wrap;
+                        width: 100%
+                    }
+
+                    .shuxas li {
+                        display: block;
+                        width: 100%;
+                        position: relative
+                    }
+
+                    .shuxas li::after {
+                        content: "";
+                        display: block;
+                        width: 100%;
+                        height: 1px;
+                        position: absolute;
+                        bottom: 0px;
+                        left: 0px;
+                        background-image: linear-gradient(to right, #546c9e, #8092b7, #8092b7, #546c9e);
+                    }
+
+                    .shuxas li.nob::after {
+                        display: none
+                    }
+
+                    .shuxas .t-grid, .test-list .test-item {
+                        padding: 15px 10px;
+                        width: 50%;
+                        box-sizing: border-box;
+                        -webkit-box-sizing: border-box;
+                        -moz-box-sizing: border-box;
+                        float: left
+                    }
+
+                    .shuxas .secon-title {
+                        font-size: 14px;
+                    }
+
+                    .shuxas .noto-text {
+                        font-size: 13px;
+                        color: #a0acc6;
+                    }
+
+                    .icon-lb li {
+                        display: block;
+                        float: left;
+                        width: 25%;
+                        text-align: center;
+                        margin-bottom: 16px;
+                    }
+
+                    .icon-lb .grid {
+                        margin: 0px 0px;
+                    }
+
+                    .icon-lb img {
+                        width: 50px;
+                        height: 50px;
+                    }
+
+                    .icon-lb li .text {
+                        font-size: 13px;
+                        text-align: center;
+                        color: #556d9e
+                    }
+
+                    .zite .layer {
+                        margin-top: 10px;
+                    }
+
+                    .ms-text {
+                        color: #78a4ff;
+                        font-size: 30px;
+                        line-height: 30px;
+                    }
+
+                    .ms-text sup, .ms-text span {
+                        font-size: 14px;
+                    }
+
+                    .kjshow li {
+                        display: block;
+                        padding: 10px 0px;
+                        border-bottom: 1px solid #111724
+                    }
+
+                    .kjshow .num {
+                        float: left;
+                        width: 40px;
+                        height: 40px;
+                        line-height: 40px;
+                        font-size: 20px;
+                        text-align: center;
+                        background: #759df0;
+                        border-radius: 5px;
+                        -webkit-border-radius: 5px;
+                    }
+
+                    .kjshow .name, .kjshow .text {
+                        margin-left: 50px;
+                    }
+
+                    .rowul {
+                        width: 40%;
+                    }
+
+                    .rowul li {
+                        display: block;
+                        margin-bottom: 15px;
+                    }
+
+                    .rowul li img {
+                        width: 45px;
+                        height: 45px;
+                    }
+
+                    .test-list .test-item, .test-list .text {
+                        text-align: center
+                    }
+
+                    .test-list .text-data {
+                        display: inline-block;
+                        position: relative;
+                    }
+
+                    .test-list .text-data span {
+                        font-size: 28px;
+                        line-height: 40px;
+                        position: relative;
+                        display: inline-block;
+                        width: auto
+                    }
+
+                    .test-list .text-data span.sm {
+                        padding: 0px 0px 0px 15px;
+                        font-size: 13px;
+                    }
+
+                    .test-list .text-data em {
+                        display: block;
+                        position: absolute;
+                        top: 5px;
+                        left: 100%;
+                        font-style: normal;
+                        min-width: 35px;
+                        font-size: 14px;
+                        line-height: 20px;
+                    }
+
+                    .test-list .text-data em.sm {
+                        font-size: 12px;
+                        left: 85%;
+                    }
+
+                    .test-list .text {
+                        font-size: 14px;
+                    }
+
+                    .section .list3 ul {
+                        margin: 0px -7px;
+                    }
+
+                    .section .list3 li {
+                        margin-top: 20px;
+                    }
+
+                    .section .list3 .coli {
+                        margin: 0px 7px;
+                        text-align: center
+                    }
+
+                    .section .list3 .coli img {
+                        width: 48px;
+                        height: 48px;
+                    }
+
+                    .section .list3 .coli .text {
+                        text-align: center;
+                        line-height: 18px;
+                    }
+
+                    .section .mar5 {
+                        margin-bottom: 5px;
+                    }
+                </style>
+                <style type="text/css">
+                    .wg-table {
+                        height: 100%;
+                        width: 85%;
+                    }
+
+                    .note_text {
+                        line-height: 28px
+                    }
+
+                    .con-tent {
+                        width: 81.6% !important;
+                        margin: 0 auto
+                    }
+                </style>
+                <style type="text/css">
+                    .layer {
+                        position: relative;
+                        width: 100%
+                    }
+
+                    .video-main {
+                        width: 100%;
+                        display: none
+                    }
+
+                    .link1, .link2 {
+                        display: block;
+                        width: 24%;
+                        height: 52px;
+                        position: absolute;
+                        bottom: 12%;
+                    }
+
+                    .link1 {
+                        left: 16%;
+                    }
+
+                    .link2 {
+                        right: 16%;
+                    }
+                </style>
+                <style type="text/css">
+                    .BGblack {
+                        background: #070707
+                    }
+
+                    .bgBlak {
+                        background: #000000
+                    }
+
+                    .bgBlak2 {
+                        background: #535353
+                    }
+
+                    .bgBlak3 {
+                        background: #eeeff4
+                    }
+
+                    .bgBlak4 {
+                        background: #eae9eb
+                    }
+
+                    .txt2 {
+                        color: rgba(255, 255, 255, 0.6);
+                        font-size: 13px;
+                    }
+
+                    .v-info {
+                        text-align: center;
+                        width: 90%;
+                        position: absolute;
+                        left: 5%;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        -webkit-transform: translateY(-50%);
+                        -moz-transform: translateY(-50%);
+                    }
+
+                    .v-info p {
+                        display: block;
+                        margin-bottom: 10px;
+                    }
+
+                    .v-info span {
+                        display: inline-block;
+                        padding: 3px 10px;
+                        border: 1px solid #FFF;
+                        border-radius: 16px;
+                        -webkit-border-radius: 16px;
+                        -moz-border-radius: 16px;
+                    }
+
+                    .v-info em {
+                        display: inline-block;
+                        line-height: 20px;
+                        font-size: 14px;
+                        font-style: normal;
+                        padding-left: 20px;
+                        background: url(https://cdn.aqara.com/cdn/website/static/lodash-4.17.15/vid-icon1.png) no-repeat center left;
+                        background-size: 15px 15px;
+                    }
+
+                    .ro4 {
+                        width: 85%;
+                    }
+
+                    .ro4 li {
+                        display: block;
+                        float: left;
+                        width: 25%;
+                        text-align: center
+                    }
+
+                    .ro4 .text {
+                        text-align: center
+                    }
+
+                    .three-list li {
+                        display: block;
+                        position: relative;
+                        display: block;
+                        margin-bottom: 7px;
+                    }
+
+                    .three-list .picBox {
+                        width: 51%;
+                    }
+
+                    .three-list .prodNa {
+                        height: 100%;
+                        width: 49%;
+                        text-align: center;
+                        color: rgba(255, 255, 255, 0.9);
+                        position: absolute;
+                        top: 0px;
+                        background: #656565;
+                    }
+
+                    .three-list .prodNa p {
+                        display: block;
+                        font-size: 16px;
+                    }
+
+                    .three-list li.even .prodNa {
+                        left: 0px;
+                    }
+
+                    .three-list li.even .picBox {
+                        margin-left: 49%;
+                    }
+
+                    .three-list li.odd .prodNa {
+                        right: 0px;
+                    }
+
+                    .three-list li.odd .picBox {
+                        margin-right: 49%;
+                    }
+
+                    .three-list li.nomar {
+                        margin-bottom: 0px;
+                    }
+
+                    .app-tip {
+                        padding: 25px 0px;
+                    }
+
+                    .app-tip-nob {
+                        padding-bottom: 0px;
+                    }
+
+                    .app-tip img, .ro4 li img {
+                        width: 48px;
+                    }
+                </style>
+
+
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?2df419cadb3951597d5f6df3a9e563d1";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+</head>
+
+<body>
+<link rel="stylesheet" type="text/css" href="https://aqara-offical-web-1300889962.cos.ap-guangzhou.myqcloud.com/css/common.css">
+<link rel="stylesheet" type="text/css" href="https://aqara-offical-web-1300889962.cos.ap-guangzhou.myqcloud.com/css/animate.min.css" />
+<link rel="stylesheet" type="text/css" href="https://aqara-offical-web-1300889962.cos.ap-guangzhou.myqcloud.com/css/swiper.min.css" />
+<link rel="stylesheet" type="text/css" href="https://aqara-offical-web-1300889962.cos.ap-guangzhou.myqcloud.com/css/header_footer.css"/>
+<link rel="stylesheet" type="text/css" href="https://aqara-offical-web-1300889962.cos.ap-guangzhou.myqcloud.com/css/mo_header.css" />
+<link type="text/css" rel="stylesheet" href="https://aqara-offical-web-1300889962.cos.ap-guangzhou.myqcloud.com/css/project_pop.css" />
+<link type="text/css" rel="stylesheet" href="https://aqara-offical-web-1300889962.cos.ap-guangzhou.myqcloud.com/css/iconfont.css" />
+		<link type="text/css" rel="stylesheet" href="https://aqara-offical-web-1300889962.cos.ap-guangzhou.myqcloud.com/css/jquery.mCustomScrollbar.css" />
+
+<link type="text/css" rel="stylesheet" href="https://aqara-offical-web-1300889962.cos.ap-guangzhou.myqcloud.com/css/xiugai.css?1" />
+
+<script type="text/javascript" src="https://aqara-offical-web-1300889962.cos.ap-guangzhou.myqcloud.com/js/jquery-1.11.1.min.js"></script>
+<!--PC导航-->
+<div class="header">
+	<div class="w1400 clearfix prz">
+		<div class="logo pra">
+										<a href="index"><img src="https://aqara-offical-web-1300889962.cos.ap-guangzhou.myqcloud.com/img/navigation_logo.svg"/></a>
+		</div>
+		<div class="nav">
+			<ul class="clearfix">
+
+
+							<li>
+								<div class="first_nav prz">
+										<a href="prodCenter">产品中心</a>
+								</div>
+							</li>
+
+							<li>
+								<div class="first_nav prz">
+										<a href="homekit">Aqara HomeKit</a>
+								</div>
+							</li>
+
+							<li>
+								<div class="first_nav prz">
+										<a href="service_provider">Aqara 体验馆</a>
+								</div>
+							</li>
+
+							<li>
+								<div class="first_nav prz">
+										<a href="exclusive">Aqara 创新</a>
+								</div>
+							</li>
+
+							<li>
+								<div class="first_nav prz">
+										<a href="industry">行业应用</a>
+								</div>
+							</li>
+
+							<li>
+								<div class="first_nav prz">
+										<a href="tech_prod">技术支持</a>
+								</div>
+							</li>
+
+							<li>
+								<div class="first_nav prz">
+										<a href="prod">视频中心</a>
+								</div>
+							</li>
+
+							<li>
+								<div class="first_nav prz">
+										<a href="brand_introduction">关于我们</a>
+								</div>
+							</li>
+
+
+			</ul>
+
+			<div class="search_list">
+				<div class="search_con clearfix">
+					<div class="search_img fl"><img src="https://aqara-offical-web-1300889962.cos.ap-guangzhou.myqcloud.com/img/search.svg" /></div>
+					<div class="search_input pra"><input type="text" name="" id="seek1" value="" placeholder="搜索 aqara.com" /></div>
+					<div class="list_se">
+						<div class="fnt_12 tit">热门搜索</div>
+						<ul>
+											<li class="se_prod">
+												<a href="./search_prod?search=智能晾衣机 H1"><span class="tag ">产品</span>智能晾衣机 H1</a>
+											</li>
+											<li class="se_prod">
+												<a href="./search_prod?search=筒射灯 T2"><span class="tag ">产品</span>筒射灯 T2</a>
+											</li>
+											<li class="se_prod">
+												<a href="./search_prod?search=全自动智能猫眼锁 星耀"><span class="tag ">产品</span>全自动智能猫眼锁 星耀</a>
+											</li>
+											<li class="se_video">
+												<a href="./search_video?search=Aqara 怎么样？来听听他们怎么说"><span class="tag ">视频</span>Aqara 怎么样？来听听他们怎么说</a>
+											</li>
+											<li class="se_news">
+												<a href="./search_news?search=Aqara 绿米亮相 Google I/O 大会"><span class="tag ">新闻</span>Aqara 绿米亮相 Google I/O 大会</a>
+											</li>
+
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="u-menu">
+			<div class="menu-sub">
+			</div>
+		</div>
+		<div class="search">
+			<img src="https://aqara-offical-web-1300889962.cos.ap-guangzhou.myqcloud.com/img/svg/search.svg" alt="" class="img_search" />
+			<img src="https://aqara-offical-web-1300889962.cos.ap-guangzhou.myqcloud.com/img/close.png" class="img_close" />
+		</div>
+	</div>
+	<div class="btn_lang pra">
+		<a href="javascript:;" class="fnt_14 lang_selected">CN</a>
+		<!-- <div class="lang_list pra">
+			<a href="javascript:;" class="fnt_14">港澳臺地區/繁體中文</a>
+			<a href="javascript:;" class="fnt_14">海外地区/English</a>
+		</div> -->
+	</div>
+</div>
+<!--移动导航-->
+<div class="mo_headerCon cf">
+			<div class="mo_header cf">
+				<div class="mo_nav"><div class="nav_btn"><span></span></div></div>
+				<div class="mo_logo"><a href="/"><img src="https://aqara-offical-web-1300889962.cos.ap-guangzhou.myqcloud.com/img/svg/navigation_logo.svg" alt=""></a></div>
+
+				<div class="mo_search"><svg t="1650368638693" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3631"><path d="M934.242232 884.637975 738.287281 695.561689l1.836835-2.302439c52.767807-65.338101 81.829703-147.602709 81.829703-231.593636 0-203.716728-165.742858-369.473913-369.411491-369.473913-203.731054 0-369.505635 165.757185-369.505635 369.473913 0 203.715705 165.774581 369.45754 369.505635 369.45754 89.26607 0 175.511339-32.450063 242.841817-91.288123l2.209318-1.929955 195.485253 186.963159 1.959631 0 0.031722 1.61887c4.947685 3.483334 10.517541 5.319146 16.5837 5.319146 16.180518 0 29.308513-13.192464 29.308513-29.310559C940.96126 896.276037 938.72329 890.239554 934.242232 884.637975zM452.541305 772.413008c-171.358763 0-310.74637-139.388631-310.74637-310.74637 0-171.34239 139.387607-310.700321 310.74637-310.700321 171.309644 0 310.700321 139.357931 310.700321 310.700321C763.241626 633.024377 623.851972 772.413008 452.541305 772.413008z" p-id="3632" fill="#ffffff"></path></svg></div>
+
+				<div class="mo_langu"><svg t="1653356368604" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3076"><path d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64z m0 224c-29.5 0-58.3-2.6-86.2-7.5C452 175.3 491.4 120 512 120c20.6 0 60 55.3 86.2 160.5-27.9 4.8-56.7 7.5-86.2 7.5z m140.7-20.4c-13.6-55.7-31.8-102.6-53.1-137.4 63.6 14.6 121.3 44.7 169 86.1-35.3 21.8-74.3 39.1-115.9 51.3z m-281.4 0c-41.6-12.2-80.5-29.6-115.8-51.3 47.7-41.4 105.3-71.4 168.9-86-21.3 34.7-39.4 81.6-53.1 137.3zM679.5 484c-1.3-57.5-6.7-111.9-15.4-161.4 52.5-15 101.3-37.3 144.8-65.8 53.4 62 87.5 140.7 93.7 227.2H679.5z m-558.1 0c6.2-86.4 40.2-165.1 93.5-227.1 43.5 28.5 92.4 50.6 145 65.6-8.7 49.6-14.1 104-15.4 161.5H121.4z m279.1 0c1.3-55.7 6.4-105.4 13.9-148.7 31.6 5.6 64.1 8.7 97.6 8.7 33.4 0 66-3 97.6-8.6 7.5 43.3 12.5 93 13.9 148.6h-223z m408.4 283.2c-43.5-28.5-92.3-50.8-144.8-65.8 8.7-49.6 14.1-104 15.4-161.4h223.1c-6.2 86.5-40.3 165.2-93.7 227.2z m-394.5-78.5c-7.5-43.3-12.5-93-13.9-148.7h222.9c-1.3 55.6-6.3 105.3-13.9 148.6C578 683 545.4 680 512 680c-33.4 0-66 3.1-97.6 8.7zM215 767.1c-53.3-62-87.4-140.7-93.5-227.1h223.1c1.3 57.5 6.7 111.9 15.4 161.5-52.6 15-101.5 37.1-145 65.6zM512 904c-20.6 0-60-55.3-86.2-160.5 27.9-4.8 56.7-7.5 86.2-7.5s58.3 2.7 86.2 7.5C572 848.7 532.6 904 512 904z m87.6-10.2c21.3-34.8 39.5-81.7 53.1-137.4 41.7 12.2 80.6 29.5 115.9 51.2-47.7 41.5-105.4 71.6-169 86.2z m-175.2 0c-63.6-14.6-121.2-44.6-168.9-86 35.2-21.8 74.1-39.1 115.8-51.3 13.7 55.6 31.8 102.5 53.1 137.3z" p-id="3077" fill="#ffffff"></path></svg></div>
+
+				<div class="mo_searchNav cf">
+					<div class="mo_s_btn">
+						<svg t="1650368638693" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3631"><path d="M934.242232 884.637975 738.287281 695.561689l1.836835-2.302439c52.767807-65.338101 81.829703-147.602709 81.829703-231.593636 0-203.716728-165.742858-369.473913-369.411491-369.473913-203.731054 0-369.505635 165.757185-369.505635 369.473913 0 203.715705 165.774581 369.45754 369.505635 369.45754 89.26607 0 175.511339-32.450063 242.841817-91.288123l2.209318-1.929955 195.485253 186.963159 1.959631 0 0.031722 1.61887c4.947685 3.483334 10.517541 5.319146 16.5837 5.319146 16.180518 0 29.308513-13.192464 29.308513-29.310559C940.96126 896.276037 938.72329 890.239554 934.242232 884.637975zM452.541305 772.413008c-171.358763 0-310.74637-139.388631-310.74637-310.74637 0-171.34239 139.387607-310.700321 310.74637-310.700321 171.309644 0 310.700321 139.357931 310.700321 310.700321C763.241626 633.024377 623.851972 772.413008 452.541305 772.413008z" p-id="3632" fill="#ffffff"></path></svg>
+					</div>
+					<div class="mo_s_input"><input id="seek2" type="text" placeholder="搜索 aqara.com"></div>
+					<div class="mo_s_clock">
+						<svg t="1650418613087" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1271"><path d="M511.232 438.8352L112.9984 40.6016A51.2 51.2 0 0 0 40.6016 112.9984L438.784 511.232 40.6016 909.4656a51.2 51.2 0 1 0 72.3968 72.448l398.2336-398.2848 398.2336 398.2848a51.2 51.2 0 1 0 72.448-72.448l-398.2848-398.2336 398.2848-398.2336A51.2 51.2 0 0 0 909.4656 40.6016L511.232 438.784z" p-id="1272" fill="#ffffff"></path></svg>
+					</div>
+				</div>
+				<div class="mo_languNav cf">
+					<div class="mo_s_btn">
+						<svg t="1653356368604" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3076"><path d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64z m0 224c-29.5 0-58.3-2.6-86.2-7.5C452 175.3 491.4 120 512 120c20.6 0 60 55.3 86.2 160.5-27.9 4.8-56.7 7.5-86.2 7.5z m140.7-20.4c-13.6-55.7-31.8-102.6-53.1-137.4 63.6 14.6 121.3 44.7 169 86.1-35.3 21.8-74.3 39.1-115.9 51.3z m-281.4 0c-41.6-12.2-80.5-29.6-115.8-51.3 47.7-41.4 105.3-71.4 168.9-86-21.3 34.7-39.4 81.6-53.1 137.3zM679.5 484c-1.3-57.5-6.7-111.9-15.4-161.4 52.5-15 101.3-37.3 144.8-65.8 53.4 62 87.5 140.7 93.7 227.2H679.5z m-558.1 0c6.2-86.4 40.2-165.1 93.5-227.1 43.5 28.5 92.4 50.6 145 65.6-8.7 49.6-14.1 104-15.4 161.5H121.4z m279.1 0c1.3-55.7 6.4-105.4 13.9-148.7 31.6 5.6 64.1 8.7 97.6 8.7 33.4 0 66-3 97.6-8.6 7.5 43.3 12.5 93 13.9 148.6h-223z m408.4 283.2c-43.5-28.5-92.3-50.8-144.8-65.8 8.7-49.6 14.1-104 15.4-161.4h223.1c-6.2 86.5-40.3 165.2-93.7 227.2z m-394.5-78.5c-7.5-43.3-12.5-93-13.9-148.7h222.9c-1.3 55.6-6.3 105.3-13.9 148.6C578 683 545.4 680 512 680c-33.4 0-66 3.1-97.6 8.7zM215 767.1c-53.3-62-87.4-140.7-93.5-227.1h223.1c1.3 57.5 6.7 111.9 15.4 161.5-52.6 15-101.5 37.1-145 65.6zM512 904c-20.6 0-60-55.3-86.2-160.5 27.9-4.8 56.7-7.5 86.2-7.5s58.3 2.7 86.2 7.5C572 848.7 532.6 904 512 904z m87.6-10.2c21.3-34.8 39.5-81.7 53.1-137.4 41.7 12.2 80.6 29.5 115.9 51.2-47.7 41.5-105.4 71.6-169 86.2z m-175.2 0c-63.6-14.6-121.2-44.6-168.9-86 35.2-21.8 74.1-39.1 115.8-51.3 13.7 55.6 31.8 102.5 53.1 137.3z" p-id="3077" fill="#ffffff"></path></svg>
+					</div>
+					<div class="mo_s_clock">
+						<svg t="1650418613087" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1271"><path d="M511.232 438.8352L112.9984 40.6016A51.2 51.2 0 0 0 40.6016 112.9984L438.784 511.232 40.6016 909.4656a51.2 51.2 0 1 0 72.3968 72.448l398.2336-398.2848 398.2336 398.2848a51.2 51.2 0 1 0 72.448-72.448l-398.2848-398.2336 398.2848-398.2336A51.2 51.2 0 0 0 909.4656 40.6016L511.232 438.784z" p-id="1272" fill="#ffffff"></path></svg>
+					</div>
+				</div>
+			</div>
+			<div class="mo_navCon">
+				<ul>
+										<li><a href="prodCenter">产品中心</a></li>
+										<li><a href="homekit">Aqara HomeKit</a></li>
+										<li><a href="service_provider">Aqara 体验馆</a></li>
+										<li><a href="exclusive">Aqara 创新</a></li>
+										<li><a href="industry">行业应用</a></li>
+										<li><a href="tech_prod">技术支持</a></li>
+										<li><a href="prod">视频中心</a></li>
+										<li><a href="brand_introduction">关于我们</a></li>
+				</ul>
+			</div>
+			<div class="mo_searchCon">
+				<dl id="hotSearch">
+					 <dt>热门搜索</dt>
+									<dd><a href="search_prod?search=智能晾衣机 H1">智能晾衣机 H1</a></dd>
+									<dd><a href="search_prod?search=筒射灯 T2">筒射灯 T2</a></dd>
+									<dd><a href="search_prod?search=全自动智能猫眼锁 星耀">全自动智能猫眼锁 星耀</a></dd>
+									<dd><a href="search_video?search=Aqara 怎么样？来听听他们怎么说">Aqara 怎么样？来听听他们怎么说</a></dd>
+									<dd><a href="search_news?search=Aqara 绿米亮相 Google I/O 大会">Aqara 绿米亮相 Google I/O 大会</a></dd>
+				</dl>
+			</div>
+		<div class="mo_languCon">
+			<div class="mo_languDl">
+					<dl>
+						<dt>亚太</dt>
+								<dd class="cf"><a href="https://www.aqara.com/cn/home.html"><span>中国大陆</span><b>简体中文</b></a></dd>
+								<dd class="cf"><a href="https://www.aqara.com/kr/home.html"><span>대한민국</span><b>한글</b></a></dd>
+					</dl>
+					<dl>
+						<dt>欧洲</dt>
+								<dd class="cf"><a href="https://www.aqara.com/eu/home.html"><span>Europe</span><b>English</b></a></dd>
+					</dl>
+					<dl>
+						<dt>北美</dt>
+								<dd class="cf"><a href="https://www.aqara.com/us/home.html"><span>United States</span><b>English</b></a></dd>
+					</dl>
+					<dl>
+						<dt>其他国家与地区</dt>
+								<dd class="cf"><a href="https://www.aqara.com/en/home.html"><span>Global</span><b>English</b></a></dd>
+					</dl>
+			</div>
+		</div>
+</div>
+<div class="mo_headerHeight"></div>
+<div class="fancy_cover_lang not_dim" id="fancy_reg">
+	<!-- 选择地区 -->
+	<div class="fancy_wrapper_lang pra">
+		<div class="fancy_box">
+				<div class="fancy_inner">
+					<h5 class="fnt_56">选择您的国家/地区</h5>
+						<div class="clearfix mt_60 form_flex">
+							<dl class="form_item_reg prz">
+								<dt class="fnt_20">亚太</dt>
+									<dd class="clearfix">
+											<a href="https://www.aqara.com/cn/home.html" class="reg_item">
+												<span class="fnt_16 reg_item_left">中国大陆</span>
+												<span class="fnt_14 reg_item_right">简体中文</span>
+											</a>
+											<a href="https://www.aqara.com/kr/home.html" class="reg_item">
+												<span class="fnt_16 reg_item_left">대한민국</span>
+												<span class="fnt_14 reg_item_right">한글</span>
+											</a>
+									</dd>
+							</dl>
+						</div>
+						<div class="clearfix mt_60 form_flex">
+							<dl class="form_item_reg prz">
+								<dt class="fnt_20">欧洲</dt>
+									<dd class="clearfix">
+											<a href="https://www.aqara.com/eu/home.html" class="reg_item">
+												<span class="fnt_16 reg_item_left">Europe</span>
+												<span class="fnt_14 reg_item_right">English</span>
+											</a>
+											<p class="reg_item reg_item_none">
+
+											</p>
+									</dd>
+							</dl>
+						</div>
+						<div class="clearfix mt_60 form_flex">
+							<dl class="form_item_reg prz">
+								<dt class="fnt_20">北美</dt>
+									<dd class="clearfix">
+											<a href="https://www.aqara.com/us/home.html" class="reg_item">
+												<span class="fnt_16 reg_item_left">United States</span>
+												<span class="fnt_14 reg_item_right">English</span>
+											</a>
+											<p class="reg_item reg_item_none">
+
+											</p>
+									</dd>
+							</dl>
+						</div>
+						<div class="clearfix mt_60 form_flex">
+							<dl class="form_item_reg prz">
+								<dt class="fnt_20">其他国家与地区</dt>
+									<dd class="clearfix">
+											<a href="https://www.aqara.com/en/home.html" class="reg_item">
+												<span class="fnt_16 reg_item_left">Global</span>
+												<span class="fnt_14 reg_item_right">English</span>
+											</a>
+											<p class="reg_item reg_item_none">
+
+											</p>
+									</dd>
+							</dl>
+						</div>
+				</div>
+		</div>
+		<a href="javascript:;" class="reg_close_inner pra"></a>
+	</div>
+</div>
+<div class="form_cover_top">
+	<div class="form_wrapper pra" id="form_customized">
+		<div class="form_box prz">
+			<h5 class="fnt_56">全屋智能定制</h5>
+			<div class="tips fnt_14 mt_40">*为必填项</div>
+			<div class="clearfix mt_20 form_flex">
+				<dl class="fl form_item_inp prz form_user">
+					<dt class="fnt_12">姓名<span class="ibox">*</span></dt>
+					<dd>
+						<input type="text" placeholder="请输入">
+					</dd>
+					<p class="fnt_12 form_tip form_tip_blank pra">请输入您的姓名</p>
+					<p class="fnt_12 form_tip form_tip_error pra">请输入2到16位字母，数字，下划线组合</p>
+				</dl>
+				<dl class="fr form_item_inp prz form_phone">
+					<dt class="fnt_12">手机号<span class="ibox">*</span></dt>
+					<dd>
+						<input type="text" class="cphone" placeholder="请输入">
+					</dd>
+					<p class="fnt_12 form_tip form_tip_blank pra">请输入您的手机号</p>
+					<p class="fnt_12 form_tip form_tip_error pra">请输入正确的手机号</p>
+				</dl>
+				<dl class="form_item_inp prz form_verif">
+					<dt class="fnt_12">验证码<span class="ibox">*</span></dt>
+					<dd class="prz">
+						<input type="text" maxlength="6" placeholder="请输入">
+						<a href="javascript:;" class="get_verif pra get_code">获取验证码</a>
+					</dd>
+					<p class="fnt_12 form_tip form_tip_blank pra">请输入您的验证码</p>
+					<p class="fnt_12 form_tip form_tip_error pra">请输入正确的手机号</p>
+				</dl>
+			</div>
+			<div class="sel_con">
+				<div class="pro_con form_reg">
+					<p class="fnt_14">选择地区<i>*</i></p>
+					<div class="sel_result fnt_16 top"><span>请选择</span><i></i></div>
+					<div class="area_all">
+						<div class="sel_province fnt_16"><span>请选择省份</span><i></i></div>
+						<ul class="fnt_14 area_province"></ul>
+						<div class="sel_city fnt_16"><span>请选择城市</span><i></i></div>
+						<ul class="fnt_14 area_city"></ul>
+						<div class="sel_area fnt_16"><span>请选择区县</span><i></i></div>
+						<ul class="fnt_14 area_area"></ul>
+					</div>
+					<input type="hidden" name="carea" value="">
+					<span class="error form_tip">请选择地区</span>
+				</div>
+			</div>
+			<dl class="form_item_textarea">
+				<dt class="fnt_12">需求描述</dt>
+				<dd class="prz form_text">
+					<textarea name="" id="" placeholder="请输入" maxlength="50"></textarea>
+					<p class="pra word_count"><span id="word_now">0</span>/<span id="word_total">50</span></p>
+				</dd>
+			</dl>
+			<a href="javascript:;" class="form_submit fnt_14" id="form_submit">立即预约</a>
+		</div>
+		<a href="javascript:;" class="form_close_inner pra"></a>
+	</div>
+	<div class="form_suc pra">
+		<p class="fnt_16">提交成功，我们会尽快联系您</p>
+	</div>
+	<div class="form_wrapper pra preview" id="fancy_prew">
+		<div class="form_box prz">
+			<h4 class="fnt_56">加入我们，<br>共创财富未来。</h4>
+			<div class="fancy_info mt_20">
+				<b class="tips fnt_14">*为必填项</b>
+				<div class="sel_top">
+					<div class="left">
+						<p class="fnt_14">姓名 <i>*</i></p>
+						<input type="text" value="" name="cname" placeholder="请输入">
+						<span class="error">请输入您的姓名</span>
+					</div>
+					<div class="left">
+						<p class="fnt_14">手机号 <i>*</i></p>
+						<input type="text" value="" maxlength="11" name="cphone" placeholder="请输入">
+						<span class="error">请输入您的手机号</span>
+					</div>
+					<div class="right">
+						<p class="fnt_14">验证码 <i>*</i></p>
+						<div class="yzm_all">
+							<input type="text" value="" maxlength="6" name="ccode" placeholder="请输入">
+							<button class="get_code">获取验证码</button>
+						</div>
+						<span class="error">请输入您的手机号，再输入验证码</span>
+					</div>
+				</div>
+				<div class="sel_con">
+					<div class="pro_con">
+						<p class="fnt_14">选择地区<i>*</i></p>
+						<div class="sel_result fnt_16 top"><span>请选择</span><i></i></div>
+						<div class="area_all">
+							<div class="sel_province fnt_16"><span>请选择省份</span><i></i></div>
+							<ul class="fnt_14 area_province"></ul>
+							<div class="sel_city fnt_16"><span>请选择城市</span><i></i></div>
+							<ul class="fnt_14 area_city"></ul>
+							<div class="sel_area fnt_16"><span>请选择区县</span><i></i></div>
+							<ul class="fnt_14 area_area"></ul>
+						</div>
+						<input type="hidden" name="carea" value="">
+						<span class="error">请选择地区</span>
+					</div>
+				</div>
+				<div class="sel_bot">
+					<p class="fnt_14">需求描述</p>
+					<div class="txt_con">
+						<textarea class="fnt_16" name="content" maxlength="50" placeholder="请描述您的合作需求，我们会尽快与您联系"></textarea>
+						<span class="sel_length"><i>0</i>/50</span>
+					</div>
+					<span class="error">请输入您的合作需求</span>
+					<b class="fnt_14 ltips">同一手机号每天最多只能提交一次，不可重复提交</b>
+				</div>
+				<div class="mt_20 form_btn">
+					<a href="javascript:;" class="ibox" id="fancy_submit">提交</a>
+				</div>
+			</div>
+		</div>
+		<a href="javascript:;" class="fancy_close_inner pra" id="fancy_close"></a>
+	</div>
+</div>
+<div class="float_btn">
+	<a href="javascript:;" class="float_open prz">
+		<img src="https://aqara-offical-web-1300889962.cos.ap-guangzhou.myqcloud.com/img/icon_coop.png" class="float_icon_default pra">
+		<img src="https://aqara-offical-web-1300889962.cos.ap-guangzhou.myqcloud.com/img/icon_coop_hover.png" class="float_icon_hover pra">
+	</a>
+	<div class="float_bar clearfix pra">
+		<a href="javascript:;" class="fl fnt_14" id="open_customized">全屋智能定制</a>
+		<a href="javascript:;" class="fl fnt_14" id="open_prew">成为服务商</a>
+	</div>
+</div>
+
+<script type="text/javascript" src="https://aqara-offical-web-1300889962.cos.ap-guangzhou.myqcloud.com/js/base.js"></script>
+<script type="text/javascript" src="https://aqara-offical-web-1300889962.cos.ap-guangzhou.myqcloud.com/js/wow.min.js"></script>
+<script type="text/javascript" src="https://aqara-offical-web-1300889962.cos.ap-guangzhou.myqcloud.com/js/common.js"></script>
+<script type="text/javascript" src="https://aqara-offical-web-1300889962.cos.ap-guangzhou.myqcloud.com/js/swiper4.5.0.min.js"  charset="utf-8"></script>
+<script type="text/javascript" src="https://aqara-offical-web-1300889962.cos.ap-guangzhou.myqcloud.com/js/pop.js"></script>
+<script type="text/javascript" src="https://aqara-offical-web-1300889962.cos.ap-guangzhou.myqcloud.com/js/business_address.js"></script>
+<script type="text/javascript" src="https://aqara-offical-web-1300889962.cos.ap-guangzhou.myqcloud.com/js/jquery.mCustomScrollbar.concat.min.js"></script>
+
+<script type="text/javascript">
+$(function(){
+
+function setCookie(cname,cvalue,exdays){
+    var d = new Date();
+    d.setTime(d.getTime()+(exdays*24*60*60*1000));
+    var expires = "expires="+d.toGMTString();
+    document.cookie = cname+"="+cvalue+"; "+expires;
+}
+function getCookie(cname){
+    var name = cname + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0; i<ca.length; i++) {
+        var c = ca[i].trim();
+        if (c.indexOf(name)==0) { return c.substring(name.length,c.length); }
+    }
+    return "";
+}
+$('.header .nav ul.clearfix li').click(function(){
+	var NName = $.trim($(this).text());
+	setCookie("NavName",NName,1);
+})
+$('.footer .footer_top ul li dt').click(function(){
+	var NName = $.trim($(this).text());
+	setCookie("NavName",NName,1);
+})
+$('.footer .footer_top ul li dd').click(function(){
+	var NName = $.trim($(this).parent().find('dt').text());
+	setCookie("NavName",NName,1);
+})
+$('.logo').click(function(){
+	var NName = "wu";
+	setCookie("NavName",NName,1);
+})
+$('.header .nav ul.clearfix li').each(function(inn,ell){
+	if($.trim($(ell).text()) == getCookie('NavName')){
+		$(ell).addClass('active').siblings().removeClass('active')
+	}
+})
+
+
+	$(".search_input input").keydown(function (e) {
+		if (e.which == 13) {
+			//导航 PC端 触发后执行
+			let val = $('#seek1').val();
+			if (val != null && val != ''){
+				window.location.href="search_prod?search=" + val
+			}
+		}
+	});
+	$(".mo_s_input input").keydown(function (e) {
+		if (e.which == 13) {
+			//导航 移动端  触发后执行
+			let val = $('#seek2').val();
+			if (val != null && val != ''){
+				window.location.href="search_prod?search=" + val
+			}
+		}
+	});
+
+
+	$(".get_code").on("click", function () {
+		var phone = $(".cphone").val() ? $(".cphone").val() : $("[name='cphone']").val()
+		$.ajax({
+			url: '/jeecg-boot/form/sendCode',
+			data: {
+				phone: phone,
+			},
+			type: 'post',
+			contentType: "application/x-www-form-urlencoded",
+			dataType: 'json',
+			success: function (res) {
+				console.log(res)
+			},
+			error: function (xhr, errorMessage, e) {
+				alert(e)
+			}
+		})
+	})
+
+
+	$("#fancy_reg").find(".reg_close_inner").on("click",function(){
+		$("#fancy_reg").fadeOut();
+		$("html").removeClass("fancy_fixed");
+		$("body>*:not('.fancy_cover_lang')").removeClass("fancy_dim");
+	});
+
+	$(".header .btn_lang").find(".lang_selected").on("click",function(){
+		$(".fancy_cover_lang").height($(window).height());
+		$("#fancy_reg").find(".fancy_wrapper_lang").css("height",$(window).height() * 0.8);
+		$("#fancy_reg").find(".fancy_box").mCustomScrollbar();
+		$("body>*:not('.fancy_cover_lang')").addClass("fancy_dim");
+		$("#fancy_reg").fadeIn();
+		$("html").addClass("fancy_fixed");
+	});
+
+	$('.mo_nav .nav_btn').click(function(){
+		$('.mo_searchCon').removeClass('active')
+    $(this).toggleClass('active')
+    $('.mo_headerCon').toggleClass('active')
+    $('.mo_navCon').toggleClass('active')
+    $('body').toggleClass('active')
+  })
+  $('.mo_langu').click(function(){
+  	$('.mo_nav .nav_btn').removeClass('active')
+  	$('.mo_navCon').removeClass('active')
+  	$('.mo_languCon').addClass('active')
+  	$('.mo_languNav').addClass('active')
+  	$('.mo_headerCon').addClass('active')
+  	$('body').addClass('active')
+  })
+  $('.mo_search').click(function(){
+  	$('.mo_nav .nav_btn').removeClass('active')
+  	$('.mo_navCon').removeClass('active')
+  	$('.mo_searchCon').addClass('active')
+  	$('.mo_searchNav').addClass('active')
+  	$('.mo_headerCon').addClass('active')
+  	$('body').addClass('active')
+  })
+  $('.mo_s_clock').click(function(){
+  	$('.mo_searchCon').removeClass('active')
+  	$('.mo_searchNav').removeClass('active')
+  	$('.mo_headerCon').removeClass('active')
+  	$('.mo_languCon').removeClass('active')
+  	$('.mo_languNav').removeClass('active')
+  	$('body').removeClass('active')
+  })
+
+  var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 4,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    mousewheel: true,
+    keyboard: true,
+  });
+
+              	province();
+  				//初始化省
+  				function province() {
+  					$('.form_cover_top .area_city').html('');
+  					$('.form_cover_top .area_province').html('');
+  					$('.form_cover_top .area_area').html('');
+  		            $.each(Address, function (i, item) {
+  		                var opt = $('<li>' + item.value + '</li>');
+  		                $('.form_cover_top .area_province').append(opt);
+  		            })
+  		            $(".form_cover_top .area_province").mCustomScrollbar();
+  		        }
+  		        //点击选择框时，显示省市区县下拉
+  	            $('.form_cover_top .sel_result.top').on("click",function(ev){
+  	            	$('.form_cover_top .area_city li').hide();
+  								$('.form_cover_top .area_area li').hide();
+
+  	            	ev.stopPropagation();
+  	            	if($(this).hasClass("active")){
+  	            		$(this).removeClass("active");
+  	            		$(this).next().slideUp();
+  	            	}else{
+  	            		$(this).addClass("active");
+  	            		$(this).next().slideDown();
+  	            		$(this).parents(".pro_con").removeClass("c_error");
+  	            		$(this).siblings(".form_tip").removeClass("active");
+  	            		if($("[name='carea']").val()){
+  	            			// console.log($(".area_province li.active")[0].offsetTop)
+  			            		$(".form_cover_top .area_province").mCustomScrollbar("scrollTo",$(".area_province li.active")[0].offsetTop);
+  			            		// $(".form_cover_top .area_city").mCustomScrollbar("scrollTo",$(".area_city li.active")[0].offsetTop);
+  			            		// $(".form_cover_top .area_area").mCustomScrollbar("scrollTo",$(".area_area li.active")[0].offsetTop);
+  			            }
+  	            	}
+  	            });
+  				//点击请选择省份
+  	            $(document).on("click",'.form_cover_top .sel_province',function(){
+              		$(".form_cover_top .sel_city").removeClass("active");
+              		$(".form_cover_top .sel_shop").removeClass("active");
+              		$(".form_cover_top .sel_shop").next().slideUp();
+              		$(".form_cover_top .sel_city").next().slideUp();
+  	            	if($(this).hasClass("active")){
+  	            		$(this).removeClass("active");
+  	            		$(this).next().slideUp();
+  	            	}else{
+  	            		$(this).addClass("active");
+  	            		$(this).next().slideDown();
+  	            	}
+  	            });
+  				//省份选择
+  	            $(document).on("click",'.form_cover_top .area_province li',function(){
+  	            	$('.form_cover_top .area_city li').show()
+  		            	if($(window).width() <= 479){
+  		            		$(this).parents(".area_province").hide();
+  		            		$(this).parents(".area_province").siblings('.sel_province').removeClass("active");
+  		            		$(this).parents(".area_province").siblings('.sel_province').find("span").text($(this).text());
+  		            		$(this).parents(".area_province").siblings('.sel_city span').html('<li>请选择城市</li>');
+  		            		$(this).parents(".area_province").siblings('.sel_area span').html('<li>请选择区县</li>');
+  		            	}
+
+  		            	$(this).parents('.area_all').find(".area_city").mCustomScrollbar("destroy");
+  		            	$(this).parents('.area_all').find(".area_area").mCustomScrollbar("destroy");
+
+  		            	// $(this).parents(".area_province").siblings(".area_city").mCustomScrollbar("destroy");
+  		                $(this).parents(".area_province").siblings(".area_city").empty();
+  		            	// $(this).parents(".area_province").siblings(".area_area").mCustomScrollbar("destroy");
+  		                $(this).parents(".area_province").siblings(".area_area").empty();
+  		                $(this).parents(".area_all").siblings('.sel_result').find("span").text("请选择");
+  		                $(this).parents(".area_all").siblings("[name='carea']").val('');
+  	            		$(this).parents(".area_all").find("li").removeClass("active");
+  		                if(!$(this).hasClass("active")){
+  		                	$(this).addClass("active").siblings().removeClass("active");
+  		                }
+  		                $.each(Address, function (i, item) {
+							if (item.value == $(".form_cover_top .area_province li.active").text()) {
+  		                        cityJson = item.children;
+
+  		                        $.each(cityJson, function (i, item) {
+  		                            var opt = $('<li>' + item.value + '</li>');
+  		                            $('.area_city').append(opt);
+  		                        });
+  		                    }
+  		                })
+
+	  		            	$(".form_cover_top .area_city").mCustomScrollbar();
+
+  	            });
+  	            //点击请选择城市
+  	            $(document).on("click",'.form_cover_top .sel_city',function(){
+  	            	$('.form_cover_top .area_area li').show();
+  	            	if($(this).siblings('.sel_province').find("span").text() == "请选择省份"){
+  	            		return false;
+  	            	}
+              		$(this).siblings(".sel_province").removeClass("active");
+              		$(this).siblings(".sel_area").removeClass("active");
+              		$(this).siblings(".sel_area").next().slideUp();
+              		$(this).siblings(".sel_province").next().slideUp();
+  	            	if($(this).hasClass("active")){
+  	            		$(this).removeClass("active");
+  	            		$(this).next().slideUp();
+  	            	}else{
+  	            		$(this).addClass("active");
+  	            		$(this).next().slideDown();
+  	            	}
+  	            });
+  				//市选择
+  	            $(document).on("click",".form_cover_top .area_city li",function(){
+  	            		if($(window).width() <= 479){
+  		            		$(this).parents(".area_city").hide();
+  		            		$(this).parents(".area_city").siblings('.sel_city').removeClass("active");
+  		            		$(this).parents(".area_city").siblings('.sel_city').find("span").text($(this).text());
+  		            		$(this).parents(".area_city").siblings('.sel_area').find("span").text("请选择区县");
+  	            		}
+  		            	$(this).parents(".area_city").siblings(".area_area").mCustomScrollbar("destroy");
+  		                $(this).parents(".area_city").siblings('.area_area').empty();
+  		                if(!$(this).hasClass("active")){
+  		                	$(this).addClass("active").siblings().removeClass("active");
+  		                }
+  		                $.each(Address, function (i, item) {
+
+  		                    if (item.value == $(".form_cover_top .area_province li.active").text()) {
+  		                        cityJson = item.children
+  		                		$.each(cityJson, function (i, item) {
+
+  		                    		if (item.value == $(".form_cover_top .area_city li.active").text()) {
+
+  		                       			areaJson = item.children
+
+  				                        $.each(areaJson, function (i, item) {
+  				                            var opt = $('<li>' + item.value + '</li>');
+  				                            $('.form_cover_top .area_area').append(opt);
+  				                        });
+  				                    }
+  		                        });
+  		                    }
+  		                })
+  		            	$(".form_cover_top .area_area").mCustomScrollbar();
+  	            });
+  	            //点击请选择区县
+  	            $(document).on("click",'.form_cover_top .sel_area',function(){
+  	            	if($(this).siblings('.sel_province').find("span").text() == "请选择省份" || $(this).siblings('.sel_city').find("span").text() == "请选择城市"){
+  	            		return false;
+  	            	}
+              		$(this).siblings(".sel_province").removeClass("active");
+              		$(this).siblings(".sel_city").removeClass("active");
+              		$(this).siblings(".sel_province").next().slideUp();
+              		$(this).siblings(".sel_city").next().slideUp();
+  	            	if($(this).hasClass("active")){
+  	            		$(this).removeClass("active");
+  	            		$(this).next().slideUp();
+  	            	}else{
+  	            		$(this).addClass("active");
+  	            		$(this).next().slideDown();
+  	            	}
+  	            });
+  	            //区县选择
+  	            $(document).on("click",".form_cover_top .area_area li",function(){
+  	            		var pron = $(this).parents(".area_area").siblings(".area_province").find("li.active").text();
+  	            		var city = $(this).parents(".area_area").siblings(".area_city").find("li.active").text();
+  		                if(!$(this).hasClass("active")){
+  		                	$(this).addClass("active").siblings().removeClass("active");
+  		                }
+  	            		var area = $(this).text();
+
+  	            		if($(window).width() <= 479){
+  		            		$(this).parents(".area_area").hide();
+  		            		$(this).parents(".area_area").siblings('.sel_area').removeClass("active");
+  		            		$(this).parents(".area_area").siblings('.sel_area').find("span").text($(this).text());
+  	            		}
+  	            		$(this).parents(".pro_con").removeClass("c_error");
+  		                $(this).parents(".area_all").siblings(".sel_result").find("span").text(pron+city+area);
+  		                $(this).parents(".area_all").siblings("[name='carea']").val(pron+city+area);
+  	            		$(this).parents(".area_all").siblings('.sel_result').removeClass("active");
+  	            	 	$(this).parents(".area_all").siblings('.sel_result').next().hide();
+  	            });
+
+  	            // $('.sel_result').on("click",function(){
+  	            // 	if($(this).hasClass("active")){
+  	            // 		$(this).removeClass("active");
+  	            // 		$(this).next().hide();
+  	            // 	}else{
+  	            // 		$(this).addClass("active");
+  	            // 		$(this).next().show();
+  	            // 	}
+  	            // });
+
+                  //点击空白处隐藏弹出层
+      			$(document).click(function(event) {
+      				var _con = $('.form_cover_top .sel_result.top,.area_all'); // 设置目标区域
+      				if(!_con.is(event.target) && _con.has(event.target).length === 0) {
+                  		$('.form_cover_top .sel_result.top').removeClass("active");
+                  		$('.form_cover_top .area_all').hide();
+                  		if($(".form_cover_top").find(".form_wrapper.open").find(".sel_result.top span").text() == "请选择"){
+                  			$('.form_cover_top .area_all').find("li.active").removeClass("active");
+                  			$(".form_cover_top .area_city").empty();
+                  			$(".form_cover_top .area_area").empty();
+                  		}
+
+                  		if($(window).width() <= 479){
+                  			$(".form_cover_top .sel_province").removeClass("active");
+                  			$(".form_cover_top .sel_city").removeClass("active");
+                  			$(".form_cover_top .sel_area").removeClass("active");
+                  			$('.form_cover_top .area_province').hide();
+                  			$('.form_cover_top .area_city').hide();
+                  			$('.form_cover_top .area_area').hide();
+                  		}
+      				}
+      			});
+
+				var oTextarea = $(".form_item_textarea").find("textarea");
+				oTextarea.on("focus",function(){
+					$(this).parents("dd").addClass("txt_focus")
+				});
+				oTextarea.on("blur",function(){
+					$(this).parents("dd").removeClass("txt_focus")
+				});
+				oTextarea.on("keyup",function(){
+					$("#word_now").text(oTextarea.val().length);
+				});
+
+	            var _oTextarea = $("#fancy_prew").find(".txt_con textarea");
+				_oTextarea.on("keyup",function(){
+					$("#fancy_prew").find(".sel_length i").text(_oTextarea.val().length);
+				});
+				_oTextarea.on("focus",function(){
+					$(this).closest("div").addClass("txt_focus");
+				});
+				_oTextarea.on("blur",function(){
+					$(this).closest("div").removeClass("txt_focus");
+				});
+
+				$("#open_customized").on("click",function(){
+					$(".form_cover_top").height($(window).height());
+
+					if($(window).width() > 960){
+						if($(window).height() < 780){
+
+							$("#form_customized").css("height",$(window).height() * 0.8);
+
+						  $("#form_customized").find(".form_box").mCustomScrollbar();
+						}else{
+							$("#form_customized").addClass("autoH")
+						}
+
+
+					}else if($(window).width() <= 960 && $(window).width() > 768){
+
+						if($(window).height() < 730){
+
+							$("#form_customized").css("height",$(window).height() * 0.8);
+
+						  $("#form_customized").find(".form_box").mCustomScrollbar();
+						}else{
+							$("#form_customized").addClass("autoH")
+						}
+
+					}else{
+						if($(window).height() < 700){
+
+							$("#form_customized").css("height",$(window).height() * 0.8);
+
+						  $("#form_customized").find(".form_box").mCustomScrollbar();
+						}else{
+							$("#form_customized").addClass("autoH")
+						}
+					}
+					$("body>*:not('.form_cover_top')").addClass("fancy_dim");
+					$(".form_cover_top").fadeIn();
+					$("#form_customized").fadeIn();
+					$("html").addClass("fancy_fixed");
+
+
+				});
+
+				$("#open_prew").on("click",function(){
+
+					$(".form_cover_top").height($(window).height());
+
+					if($(window).width() > 960){
+						if($(window).height() < 800){
+
+							$("#fancy_prew").css("height",$(window).height() * 0.8);
+
+						  $("#fancy_prew").find(".form_box").mCustomScrollbar();
+						}else{
+							$("#fancy_prew").addClass("autoH")
+						}
+
+
+					}else if($(window).width() <= 960 && $(window).width() > 640){
+
+						if($(window).height() < 750){
+
+							$("#fancy_prew").css("height",$(window).height() * 0.8);
+
+						  $("#fancy_prew").find(".form_box").mCustomScrollbar();
+						}else{
+							$("#fancy_prew").addClass("autoH")
+						}
+
+					}else{
+						if($(window).height() < 700){
+
+							$("#fancy_prew").css("height",$(window).height() * 0.8);
+
+						  $("#fancy_prew").find(".form_box").mCustomScrollbar();
+						}else{
+							$("#fancy_prew").addClass("autoH")
+						}
+					}
+					$("body>*:not('.form_cover_top')").addClass("fancy_dim");
+					$(".form_cover_top").fadeIn();
+					$("#fancy_prew").fadeIn();
+					$("html").addClass("fancy_fixed");
+
+				});
+
+				// 正则验证姓名
+				var userPattern = /^[a-zA-Z0-9_]{1,16}$/;
+				// 正则验证手机号
+				var phonePattern = /^[1][3,4,5,7,8,9][0-9]{9}$/
+				var userInp = $("#form_customized").find(".form_user input");
+				var phoneInp = $("#form_customized").find(".form_phone input");
+				var verifInp = $("#form_customized").find(".form_verif input");
+				var regInp = $("#form_customized").find(".form_reg input");
+				var describe = $("#form_customized").find(".form_text textarea");
+
+				$(".form_box").find("input").on("focus",function(){
+					$(this).parent("dd").siblings(".form_tip").removeClass("active");
+					$(this).closest("dd").addClass("txt_focus")
+				});
+
+				$(".form_box").find("input").on("blur",function(){
+					$(this).closest("dd").removeClass("txt_focus")
+				});
+
+
+				$(".form_reg").find("dd").on("click",function(){
+					$(this).siblings(".form_tip").removeClass("active")
+				});
+
+
+
+					//获取验证码倒计时
+					var time = 10;
+					 var interval;
+				    $(".form_verif .get_verif").click(function () {
+				    	var time = 10
+				        $(this).attr("disabled", "disabled"); //点击一次不可再点
+				        var that = $(this);
+				        interval = setInterval(function () { //定义定时器
+				            that.text("重新发送"+time+"s");
+				            time--;
+				            if (time == 0) {
+				                clearInterval(interval); //清除定时器
+				                that.text("获取验证码");
+				                that.removeAttr("disabled"); //删除这个属性
+				                time = 10;
+				            }
+				        }, 1000);
+				    });
+
+			    	//获取验证码倒计时
+
+			        $(".yzm_all button").click(function () {
+			        	var time = 10
+			            $(this).attr("disabled", "disabled"); //点击一次不可再点
+			            var that = $(this);
+			            interval = setInterval(function () { //定义定时器
+			                that.text("重新发送"+time+"s");
+			                time--;
+			                if (time == 0) {
+			                    clearInterval(interval); //清除定时器
+			                    that.text("获取验证码");
+			                    that.removeAttr("disabled"); //删除这个属性
+			                    time = 10;
+			                }
+			            }, 1000);
+			        });
+
+				var form_flag = true;
+
+
+
+				$("#form_submit").on("click",function(){
+
+					var infoCount = 0
+
+					if($.trim(userInp.val()) == ""){
+						$("#form_customized").find(".form_user .form_tip_blank").addClass("active");
+					}else{
+
+						infoCount ++
+					}
+
+
+					if($.trim(phoneInp.val()) == ""){
+						$("#form_customized").find(".form_phone .form_tip_blank").addClass("active")
+					}else{
+						if(!phonePattern.test($.trim(phoneInp.val()))){
+							$("#form_customized").find(".form_phone .form_tip_error").addClass("active")
+						}else{
+							infoCount ++
+						}
+					}
+
+					if($.trim(verifInp.val()) == ""){
+						$("#form_customized").find(".form_verif .form_tip_blank").addClass("active")
+					}else{
+						infoCount ++
+					};
+
+					//地区
+					if($.trim($("#form_customized").find("[name='carea']").val()) == ""){
+						$("#form_customized").find("[name='carea']").closest("div").addClass("c_error");
+						$("#form_customized").find("[name='carea']").siblings(".form_tip").addClass("active")
+
+					}else{
+						$("#form_customized").find("[name='carea']").closest("div").removeClass("c_error");
+						$("#form_customized").find("[name='carea']").siblings(".form_tip").removeClass("active")
+						infoCount ++
+					}
+
+					$("#form_customized").find(".form_tip").each(function(){
+						if($(this).hasClass("active")){
+							form_flag = false
+						}
+					});
+
+					if($("#form_customized").find(".form_box input").length == infoCount){
+						form_flag = true
+					}
+
+
+					if(form_flag){
+
+
+						// 发送表单数据
+						$.ajax({
+							url: '/jeecg-boot/form/formSubmit',
+							data: JSON.stringify({
+								type: 1,
+								name: userInp.val(),
+								phone: phoneInp.val(),
+								code: verifInp.val(),
+								region: regInp.val(),
+								describes: describe.val(),
+							}),
+							type: 'post',
+							contentType: "application/json",
+							dataType: 'json',
+							success: function (res) {
+								if (res.result){
+									$(".form_suc").fadeIn();
+									$("#form_customized").fadeOut();
+									$("#form_customized").find(".form_box input").val("");
+									$("#form_customized").find(".form_item_slc input").data("id","")
+									$("#form_customized").find(".form_item_textarea textarea").val("");
+									$("#word_now").text("0");
+									$("#form_customized").find(".form_box .form_tip").removeClass("active")
+									setTimeout(function(){
+										$(".form_suc").fadeOut();
+										$(".form_cover_top").fadeOut();
+										$("body>*:not('form_cover_top')").removeClass("fancy_dim");
+									},1000)
+								}else{
+									alert(res.message)
+								}
+
+							},
+							error: function (xhr, errorMessage, e) {
+								alert(e)
+							}
+						});
+
+
+					}
+
+				});
+
+				var prew_flag = true;
+				function checkPhone(phone) {
+				    var reg=/^[1][3,4,5,7,8,9][0-9]{9}$/;
+				    if (!reg.test(phone)) {
+				        return false;
+				    } else {
+				        return true;
+				    }
+				}
+
+				$("#fancy_submit").on("click",function(){
+					var infoCount = 0
+					var name = $.trim($("[name='cname']").val());
+					var phone = $.trim($("[name='cphone']").val());
+					var code = $.trim($("[name='ccode']").val());
+					var area = $.trim($("#fancy_prew").find("[name='carea']").val());
+					var content = $.trim($("[name='content']").val());
+					//姓名
+					if(!name){
+						$("[name='cname']").closest("div").addClass("c_error");
+					}else{
+						$("[name='cname']").closest("div").removeClass("c_error");
+						infoCount ++
+					}
+					//手机号
+					if(!checkPhone(phone)){
+
+						$("[name='cphone']").closest("div").addClass("c_error");
+					}else{
+						$("[name='cphone']").closest("div").removeClass("c_error");
+						infoCount ++
+					}
+
+					//验证码
+					if(!code){
+						$("[name='ccode']").parent().parent().addClass("c_error");
+					}else{
+						$("[name='ccode']").parent().parent().removeClass("c_error");
+						infoCount ++
+					}
+					//地区
+					if(!area){
+						$("#fancy_prew").find("[name='carea']").closest("div").addClass("c_error");
+
+					}else{
+						$("#fancy_prew").find("[name='carea']").closest("div").removeClass("c_error");
+						infoCount ++
+					}
+					//需求描述
+					// if(!content){
+					// 	$("[name='content']").closest(".sel_bot").addClass("c_error");
+					// }else{
+					// 	$("[name='content']").closest(".sel_bot").removeClass("c_error");
+					// 	infoCount ++
+					// }
+
+
+					if($("#fancy_prew").find(".c_error").length > 0){
+						prew_flag = false
+					};
+
+					if($("#fancy_prew").find("input").length == infoCount){
+						prew_flag = true
+					}
+
+
+					if(prew_flag){
+						// 发送表单数据
+						$.ajax({
+							url: '/jeecg-boot/form/formSubmit',
+							data: JSON.stringify({
+								type: 2,
+								name: name,
+								phone: phone,
+								code: code,
+								region:area,
+								describes: content,
+							}),
+							type: 'post',
+							contentType: "application/json",
+							dataType: 'json',
+							success: function (res) {
+								if (res.result){
+									$(".form_suc").fadeIn();
+									$("#fancy_prew").fadeOut();
+									$("#fancy_prew").find("input").val("");
+									$("#fancy_prew").find(".sel_result.top span").text("");
+									$("#fancy_prew").find(".txt_con textarea").val("");
+									$("#fancy_prew").find(".sel_length i").text("0");
+									$(".c_error").removeClass("c_error");
+									setTimeout(function(){
+										$(".form_suc").fadeOut();
+										$(".form_cover_top").fadeOut();
+										$("body>*:not('.form_cover_top')").removeClass("fancy_dim");
+									},1000)
+								}else {
+									alert(res.message)
+								}
+
+							},
+							error: function (xhr, errorMessage, e) {
+								alert(e)
+							}
+						});
+					}
+				});
+
+				$(".form_close_inner").on("click",function(){
+					var cl_btn = $(this)
+					var form_open = cl_btn.parents(".form_wrapper");
+					form_open.find('.sel_result').removeClass("active");
+					form_open.find('.sel_result span').text("请选择");
+					form_open.find('.area_all li.active').removeClass("active");
+					form_open.find("input").val("");
+					form_open.find("textarea").val("");
+					$("#word_now").text("0");
+					form_open.find('.area_all').hide();
+					form_open.find(".form_tip").removeClass("active");
+					form_open.find(".pro_con").removeClass("c_error");
+					form_open.fadeOut().removeClass("open");
+					$(".form_cover_top").fadeOut();
+					$("html").removeClass("fancy_fixed");
+					$("body>*:not('.form_cover')").removeClass("fancy_dim");
+					if($(window).width() <= 479){
+						form_open.find(".sel_province").removeClass("active");
+						form_open.find(".sel_city").removeClass("active");
+						form_open.find(".sel_area").removeClass("active");
+						form_open.find('.area_province').hide();
+						form_open.find('.area_city').hide();
+						form_open.find('.area_area').hide();
+					};
+					clearInterval(interval);
+					$(".form_verif .get_verif").text("获取验证码");
+					$(".form_verif .get_verif").removeAttr("disabled");
+
+
+				});
+
+				$("#fancy_close").on("click",function(){
+					var fancy_prew = $("#fancy_prew");
+					fancy_prew.find('.sel_result').removeClass("active");
+					fancy_prew.find('.sel_result span').text("请选择");
+					fancy_prew.find('.area_all li.active').removeClass("active");
+					fancy_prew.find("input").val("");
+					fancy_prew.find("textarea").val("");
+					fancy_prew.find(".sel_length i").text("0")
+					fancy_prew.find('.area_all').hide();
+					fancy_prew.find(".c_error").removeClass("c_error");
+					fancy_prew.fadeOut().removeClass("open");
+					$(".form_cover_top").fadeOut();
+					$("html").removeClass("fancy_fixed");
+					$("body>*:not('.form_cover_top')").removeClass("fancy_dim");
+					if($(window).width() <= 479){
+						fancy_prew.find(".sel_province").removeClass("active");
+						fancy_prew.find(".sel_city").removeClass("active");
+						fancy_prew.find(".sel_area").removeClass("active");
+						fancy_prew.find('.area_province').hide();
+						fancy_prew.find('.area_city').hide();
+						fancy_prew.find('.area_area').hide();
+					}
+					clearInterval(interval);
+					$(".yzm_all button").text("获取验证码");
+					$(".yzm_all button").removeAttr("disabled");
+				});
+
+				if(IsPC()){
+					$(".float_btn").hover(function(){
+						$(".float_bar").stop().animate({
+							width:270
+						});
+						$(".float_bar").addClass("open")
+					},function(){
+						$(".float_bar").stop().animate({
+							width:0
+						});
+						$(".float_bar").removeClass("open")
+					})
+				}else{
+					$(".float_btn").click(function(){
+						if(!$(".float_bar").hasClass('open')){
+							$(".float_bar").stop().animate({
+								width:270,
+								opacity:1
+							});
+							$(".float_bar").addClass("open")
+						}else{
+							$(".float_bar").stop().animate({
+								width:0,
+								opacity:0
+							});
+							$(".float_bar").removeClass("open")
+						}
+					})
+				}
+
+})
+</script>
+
+<div class="breadcrumb breadcrumb_prod">
+    <div class="w1280 prz clearfix">
+        <div class="wap_wrap clearfix">
+            <h4 class="fnt_24"> 全自动智能猫眼锁 星耀</h4>
+        </div>
+        <div class="cleargap bread_wrap fnt_14">
+            <a href="##" class="ibox active">概览</a>
+                    <a href="Smart-Door-Lock-S100_spec" class="ibox">产品参数</a>
+            <a href="Smart-Door-Lock-S100_support" class="ibox">产品支持</a>
+        </div>
+    </div>
+</div>
+
+
+
+    <div class="tech_over_con cf">
+
+            <div class="no_banner_over">
+
+                            <div class="pc_div">
+                                <div class="edit_con_original">
+                                    <p style=""><img title="R2 Smart Door Lock S100_PC2.jpg" src="https://cdn.aqara.com/cdn/website/mainland/static/lodash-4.17.15/R2%20Smart%20Door%20Lock%20S100_PC2.jpg" /></p>
+<p style=""><img title="R2 Smart Door Lock S100_PC3.jpg" src="https://cdn.aqara.com/cdn/website/mainland/static/lodash-4.17.15/R2%20Smart%20Door%20Lock%20S100_PC3.jpg" /></p>
+<p style=""><img title="R2 Smart Door Lock S100_PC4.jpg" src="https://cdn.aqara.com/cdn/website/mainland/static/lodash-4.17.15/R2%20Smart%20Door%20Lock%20S100_PC4.jpg" /></p>
+<p style=""><img title="R2 Smart Door Lock S100_PC5.jpg" src="https://cdn.aqara.com/cdn/website/mainland/static/lodash-4.17.15/R2%20Smart%20Door%20Lock%20S100_PC5.jpg" /></p>
+<p style=""><img title="R2 Smart Door Lock S100_PC6.jpg" src="https://cdn.aqara.com/cdn/website/mainland/static/lodash-4.17.15/R2%20Smart%20Door%20Lock%20S100_PC6.jpg" /></p>
+<p style=""><img title="R2 Smart Door Lock S100_PC7.jpg" src="https://cdn.aqara.com/cdn/website/mainland/static/lodash-4.17.15/R2%20Smart%20Door%20Lock%20S100_PC7.jpg" /></p>
+<p style=""><img title="R2 Smart Door Lock S100_PC8.jpg" src="https://cdn.aqara.com/cdn/website/mainland/static/lodash-4.17.15/R2%20Smart%20Door%20Lock%20S100_PC8.jpg" /></p>
+<p style=""><img title="R2 Smart Door Lock S100_PC9.jpg" src="https://cdn.aqara.com/cdn/website/mainland/static/lodash-4.17.15/R2%20Smart%20Door%20Lock%20S100_PC9.jpg" /></p>
+<p style=""><img title="R2 Smart Door Lock S100_PC10.jpg" src="https://cdn.aqara.com/cdn/website/mainland/static/lodash-4.17.15/R2%20Smart%20Door%20Lock%20S100_PC10.jpg" /></p>
+<p style=""><img title="R2 Smart Door Lock S100_PC11.jpg" src="https://cdn.aqara.com/cdn/website/mainland/static/lodash-4.17.15/R2%20Smart%20Door%20Lock%20S100_PC11.jpg" /></p>
+<p style=""><img title="R2 Smart Door Lock S100_PC12.jpg" src="https://cdn.aqara.com/cdn/website/mainland/static/lodash-4.17.15/R2%20Smart%20Door%20Lock%20S100_PC12.jpg" /></p>
+<p style=""><img title="R2 Smart Door Lock S100_PC13.jpg" src="https://cdn.aqara.com/cdn/website/mainland/static/lodash-4.17.15/R2%20Smart%20Door%20Lock%20S100_PC13.jpg" /></p>
+<p style=""><img title="R2 Smart Door Lock S100_PC14.jpg" src="https://cdn.aqara.com/cdn/website/mainland/static/lodash-4.17.15/R2%20Smart%20Door%20Lock%20S100_PC14.jpg" /></p>
+<p style=""><img title="R2 Smart Door Lock S100_PC15.jpg" src="https://cdn.aqara.com/cdn/website/mainland/static/lodash-4.17.15/R2%20Smart%20Door%20Lock%20S100_PC15.jpg" /></p>
+<p style=""><img title="R2 Smart Door Lock S100_PC16.jpg" src="https://cdn.aqara.com/cdn/website/mainland/static/lodash-4.17.15/R2%20Smart%20Door%20Lock%20S100_PC16.jpg" /></p>
+<p style=""><img title="R2 Smart Door Lock S100_PC17.jpg" src="https://cdn.aqara.com/cdn/website/mainland/static/lodash-4.17.15/R2%20Smart%20Door%20Lock%20S100_PC17.jpg" /></p>
+<p style=""><img title="R2 Smart Door Lock S100_PC18.jpg" src="https://cdn.aqara.com/cdn/website/mainland/static/lodash-4.17.15/R2%20Smart%20Door%20Lock%20S100_PC18.jpg" /></p>
+<p style=""><img title="R2 Smart Door Lock S100_PC19.jpg" src="https://cdn.aqara.com/cdn/website/mainland/static/lodash-4.17.15/R2%20Smart%20Door%20Lock%20S100_PC19.jpg" /></p>
+<p style=""><img title="R2 Smart Door Lock S100_PC20.jpg" src="https://cdn.aqara.com/cdn/website/mainland/static/lodash-4.17.15/R2%20Smart%20Door%20Lock%20S100_PC20.jpg" /></p>
+<p style=""><img title="R2 Smart Door Lock S100_PC21.jpg" src="https://cdn.aqara.com/cdn/website/mainland/static/lodash-4.17.15/R2%20Smart%20Door%20Lock%20S100_PC21.jpg" /></p>
+<p style=""><img title="R2 Smart Door Lock S100_PC22.jpg" src="https://cdn.aqara.com/cdn/website/mainland/static/lodash-4.17.15/R2%20Smart%20Door%20Lock%20S100_PC22.jpg" /></p>
+<p style="">&nbsp;</p>
+                                </div>
+                            </div>
+
+
+                                <div class="wrap mt_55 mb_55 wap_div">
+                                    <div class="edit_con_original">
+                                        <p><img src="https://itad-prod-officialweb-1300889962.cos.ap-beijing.myqcloud.com/jeditor/ds1门锁-电商版本-1080_01_1656669813869.jpg" /><img src="https://itad-prod-officialweb-1300889962.cos.ap-beijing.myqcloud.com/jeditor/ds1门锁-电商版本-1080_02_1656669814592.jpg" /><img src="https://itad-prod-officialweb-1300889962.cos.ap-beijing.myqcloud.com/jeditor/ds1门锁-电商版本-1080_03_1656669815291.jpg" /><img src="https://itad-prod-officialweb-1300889962.cos.ap-beijing.myqcloud.com/jeditor/ds1门锁-电商版本-1080_04_1656669815766.jpg" /><img src="https://itad-prod-officialweb-1300889962.cos.ap-beijing.myqcloud.com/jeditor/ds1门锁-电商版本-1080_05_1656669816216.jpg" /><img src="https://itad-prod-officialweb-1300889962.cos.ap-beijing.myqcloud.com/jeditor/ds1门锁-电商版本-1080_06_1656669816497.jpg" /><img src="https://itad-prod-officialweb-1300889962.cos.ap-beijing.myqcloud.com/jeditor/ds1门锁-电商版本-1080_07_1656669816819.jpg" /><img src="https://itad-prod-officialweb-1300889962.cos.ap-beijing.myqcloud.com/jeditor/ds1门锁-电商版本-1080_08_1656669817332.jpg" /><img src="https://itad-prod-officialweb-1300889962.cos.ap-beijing.myqcloud.com/jeditor/ds1门锁-电商版本-1080_09_1656669817592.jpg" /><img src="https://itad-prod-officialweb-1300889962.cos.ap-beijing.myqcloud.com/jeditor/ds1门锁-电商版本-1080_10_1656669817962.jpg" /><img src="https://itad-prod-officialweb-1300889962.cos.ap-beijing.myqcloud.com/jeditor/ds1门锁-电商版本-1080_11_1656669818381.jpg" /><img src="https://itad-prod-officialweb-1300889962.cos.ap-beijing.myqcloud.com/jeditor/ds1门锁-电商版本-1080_12_1656669818819.jpg" /><img src="https://itad-prod-officialweb-1300889962.cos.ap-beijing.myqcloud.com/jeditor/ds1门锁-电商版本-1080_13_1656669819214.jpg" /><img src="https://itad-prod-officialweb-1300889962.cos.ap-beijing.myqcloud.com/jeditor/ds1门锁-电商版本-1080-2_04_1656669819625.jpg" /><img src="https://itad-prod-officialweb-1300889962.cos.ap-beijing.myqcloud.com/jeditor/ds1门锁-电商版本-1080-2_05_1656669820075.jpg" /><img src="https://itad-prod-officialweb-1300889962.cos.ap-beijing.myqcloud.com/jeditor/ds1门锁-电商版本-1080-2_06_1656669820459.jpg" /><img src="https://itad-prod-officialweb-1300889962.cos.ap-beijing.myqcloud.com/jeditor/ds1门锁-电商版本-1080-2_07_1656669820696.jpg" /><img src="https://itad-prod-officialweb-1300889962.cos.ap-beijing.myqcloud.com/jeditor/ds1门锁-电商版本-1080-2_08_1656669821162.jpg" /><img src="https://itad-prod-officialweb-1300889962.cos.ap-beijing.myqcloud.com/jeditor/ds1门锁-电商版本-1080-2_09_1656669821738.jpg" /><img src="https://itad-prod-officialweb-1300889962.cos.ap-beijing.myqcloud.com/jeditor/ds1门锁-电商版本-1080-2_10_1656669822174.jpg" /><img src="https://itad-prod-officialweb-1300889962.cos.ap-beijing.myqcloud.com/jeditor/ds1门锁-电商版本-1080-2_11_1656669822476.jpg" /><img src="https://itad-prod-officialweb-1300889962.cos.ap-beijing.myqcloud.com/jeditor/ds1门锁-电商版本-1080-2_12_1656669822729.jpg" /><img src="https://itad-prod-officialweb-1300889962.cos.ap-beijing.myqcloud.com/jeditor/ds1门锁-电商版本-1080-2_13_1656669823031.jpg" /></p>
+                                    </div>
+                                </div>
+
+            </div>
+
+                    </div>
+
+
+                            <div class="vid_bg"></div>
+                            <div class="vid_block">
+                                <div class="vid_video">
+                                    <video id="ind_video" muted="" loop>
+                                        <source src="" type="video/mp4">
+                                    </video>
+                                </div>
+                                <div class="vid_clear"><img
+                                            src="https://cdn.aqara.com/cdn/website/static/images/c_1.png"/></div>
+                            </div>
+
+
+<div class="footer">
+    <div class="wrap">
+        <div class="footer_top">
+
+            <ul class="clearfix">
+                                            <li>
+                                <dl>
+                                                <dt><a href="javascript:;">产品中心</a></dt>
+
+                                                <dd>
+                                                    <a href="prodCenter">Aqara 产品</a>
+                                                </dd>
+                                                <dd>
+                                                    <a href="display">全屋智能场景</a>
+                                                </dd>
+
+                                </dl>
+                                    <dl>
+                                                <dt><a href="javascript:;">购买渠道</a></dt>
+
+
+                                                    <dd>
+                                                        <a href="https://aqara.tmall.com/">天猫旗舰店</a>
+                                                    </dd>
+                                                    <dd>
+                                                        <a href="https://mall.jd.com/index-1000093463.html?from=pc">京东自营店</a>
+                                                    </dd>
+                                                    <dd>
+                                                        <a href="https://www.xiaomiyoupin.com/search?keyword=Aqara">小米有品</a>
+                                                    </dd>
+                                                    <dd>
+                                                        <a href="https://haohuo.jinritemai.com/views/shop/index?id=xzzZkeU&origin_type=604&origin_id=0&new_source_type=47&new_source_id=0&source_type=47&source_id=0">抖音旗舰店</a>
+                                                    </dd>
+                                                    <dd>
+                                                        <a href="https://mobile.yangkeduo.com/mall_page.html?mall_id=925216915">拼多多旗舰店</a>
+                                                    </dd>
+                                                    <dd>
+                                                        <a href="business_store.html">线下体验店</a>
+                                                    </dd>
+
+                                    </dl>
+                            </li>
+                            <li>
+                                <dl>
+                                                <dt><a href="javascript:;">技术支持</a></dt>
+
+                                                <dd>
+                                                    <a href="tech_prod">产品支持</a>
+                                                </dd>
+
+                                </dl>
+                                    <dl>
+
+                                                    <dt><a href="javascript:;">视频中心</a></dt>
+
+
+                                                    <dd>
+                                                        <a href="prod">产品</a>
+                                                    </dd>
+                                                    <dd>
+                                                        <a href="brand">品牌</a>
+                                                    </dd>
+                                                    <dd>
+                                                        <a href="case">案例</a>
+                                                    </dd>
+                                                    <dd>
+                                                        <a href="column">栏目</a>
+                                                    </dd>
+                                                    <dd>
+                                                        <a href="vlog">短视频</a>
+                                                    </dd>
+
+                                    </dl>
+                            </li>
+                            <li>
+                                <dl>
+                                                <dt><a href="javascript:;">Aqara HomeKit</a></dt>
+
+                                                <dd>
+                                                    <a href="homekit#1">HomeKit 独家功能</a>
+                                                </dd>
+                                                <dd>
+                                                    <a href="homekit#2">HomeKit 笔记</a>
+                                                </dd>
+
+                                </dl>
+                                    <dl>
+
+                                                    <dt><a href="javascript:;">Aqara 创新</a></dt>
+
+
+                                                    <dd>
+                                                        <a href="exclusive#1">Aqara AI</a>
+                                                    </dd>
+                                                    <dd>
+                                                        <a href="exclusive#2">小乔</a>
+                                                    </dd>
+                                                    <dd>
+                                                        <a href="exclusive#3">无线物联</a>
+                                                    </dd>
+                                                    <dd>
+                                                        <a href="exclusive#4">低功耗技术</a>
+                                                    </dd>
+
+                                    </dl>
+                            </li>
+                            <li>
+                                <dl>
+                                                <dt><a href="javascript:;">Aqara 体验馆</a></dt>
+
+                                                <dd>
+                                                    <a href="service_provider">成为服务商</a>
+                                                </dd>
+                                                <dd>
+                                                    <a href="business_store.html">授权门店查询</a>
+                                                </dd>
+                                                <dd>
+                                                    <a href="https://saas.aqara.cn/booking/apple/banner.html">全屋定制</a>
+                                                </dd>
+                                                <dd>
+                                                    <a href="business_process">服务流程</a>
+                                                </dd>
+                                                <dd>
+                                                    <a href="business_charge">收费标准</a>
+                                                </dd>
+
+                                </dl>
+                                    <dl>
+
+                                                    <dt><a href="javascript:;">行业应用</a></dt>
+
+
+                                                    <dd>
+                                                        <a href="industry#1">软件产品</a>
+                                                    </dd>
+                                                    <dd>
+                                                        <a href="industry#2">解决方案</a>
+                                                    </dd>
+                                                    <dd>
+                                                        <a href="industry#3">成功案例</a>
+                                                    </dd>
+                                                    <dd>
+                                                        <a href="industry#6">成为工程商</a>
+                                                    </dd>
+
+                                    </dl>
+                            </li>
+                            <li>
+                                <dl>
+                                                <dt><a href="javascript:;">关于我们</a></dt>
+
+                                                <dd>
+                                                    <a href="brand_introduction">品牌简介</a>
+                                                </dd>
+                                                <dd>
+                                                    <a href="news">新闻动态</a>
+                                                </dd>
+                                                <dd>
+                                                    <a href="about_info">联系我们</a>
+                                                </dd>
+                                                <dd>
+                                                    <a href="https://hr.aqara.com/#/">加入我们</a>
+                                                </dd>
+                                                <dd>
+                                                    <a href="envir">环境责任</a>
+                                                </dd>
+
+                                </dl>
+                            </li>
+
+            </ul>
+
+        </div>
+        <div class="footer_center clearfix">
+            <div class="fl left">
+                <a href="##" class="footer_logo">
+                    <img src="https://aqara-offical-web-1300889962.cos.ap-guangzhou.myqcloud.com/img/footer_logo.png" class="f_l_w"/>
+                    <img src="https://aqara-offical-web-1300889962.cos.ap-guangzhou.myqcloud.com/img/footer_logo_w.png" class="f_l_b"/>
+                </a>
+                        <a href="tel:400-990-7930" class="footer_ph fnt_16">客服热线：400-990-7930</a>
+                </div>
+            <div class="fr right">
+                <ul class="clearfix">
+                            <li>
+                                <div class="img wexin"><a href="https://mp.weixin.qq.com/mp/profile_ext?action=home&__biz=MzIyMjY0MDQwMw==&scene=124#wechat_redirect" target="_blank"></a></div>
+                                <div class="ewm"><img src="https://aqara-offical-web-1300889962.cos.ap-guangzhou.myqcloud.com/temp/官网-微信公众号_1655284715246.jpg" alt="" /></div>
+                            </li>
+                                <li>
+                                    <div class="img shipinhao"></div>
+                                    <div class="ewm"><img src="https://aqara-offical-web-1300889962.cos.ap-guangzhou.myqcloud.com/temp/官网-视频号_1655284725948.png" alt="" /></div>
+                                </li>
+                                <li>
+                                    <div class="img weibo"><a href="https://weibo.com/5861541263?refer_flag=1001030103_" target="_blank"></a></div>
+                                    <div class="ewm"><img src="https://aqara-offical-web-1300889962.cos.ap-guangzhou.myqcloud.com/temp/官网-微博_1655284735711.png" alt="" /></div>
+                                </li>
+                                <li>
+                                    <div class="img douyin"><a href="https://www.douyin.com/user/MS4wLjABAAAAolTgHTvrsPY_86S3DW5o8tJaIJprSF1QJCEeM3nq_b8" target="_blank"></a></div>
+                                    <div class="ewm"><img src="https://aqara-offical-web-1300889962.cos.ap-guangzhou.myqcloud.com/temp/抖音-05_1655287980121.jpg" alt="" /></div>
+                                </li>
+                                <li>
+                                    <div class="img bili"><a href="https://space.bilibili.com/434317688?spm_id_from=333.337.0.0" target="_blank"></a></div>
+                                    <div class="ewm"><img src="https://aqara-offical-web-1300889962.cos.ap-guangzhou.myqcloud.com/temp/官网-B站_1655285009400.png" alt="" /></div>
+                                </li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer_bottom clearfix">
+                <div class="fl left">Copyright © 2022 Lumi United Technology Co., Ltd. All Rights Reserved.</div>
+                        <!-- <div class="fr "><a href="##">语言</a><span> | </span><a href="##">简体中文</a></div> -->
+        </div>
+    </div>
+</div>
+<div class="wap_footer">
+    <div class="wap_footer_top">
+                <div class="ft_item prz">
+                    <p class="ft_item_top prz">
+                                    <a href="javascript:;">产品中心</a>
+
+                        <span class="pra ft_item_arrow"></span>
+                    </p>
+                            <div class="ft_list">
+                                <a href="prodCenter">Aqara 产品</a>
+                                <a href="display">全屋智能场景</a>
+                            </div>
+                </div>
+                <div class="ft_item prz">
+                    <p class="ft_item_top prz">
+                                    <a href="javascript:;">技术支持</a>
+
+                        <span class="pra ft_item_arrow"></span>
+                    </p>
+                            <div class="ft_list">
+                                <a href="tech_prod">产品支持</a>
+                            </div>
+                </div>
+                <div class="ft_item prz">
+                    <p class="ft_item_top prz">
+                                    <a href="javascript:;">Aqara HomeKit</a>
+
+                        <span class="pra ft_item_arrow"></span>
+                    </p>
+                            <div class="ft_list">
+                                <a href="homekit#1">HomeKit 独家功能</a>
+                                <a href="homekit#2">HomeKit 笔记</a>
+                            </div>
+                </div>
+                <div class="ft_item prz">
+                    <p class="ft_item_top prz">
+                                    <a href="javascript:;">Aqara 体验馆</a>
+
+                        <span class="pra ft_item_arrow"></span>
+                    </p>
+                            <div class="ft_list">
+                                <a href="service_provider">成为服务商</a>
+                                <a href="business_store.html">授权门店查询</a>
+                                <a href="https://saas.aqara.cn/booking/apple/banner.html">全屋定制</a>
+                                <a href="business_process">服务流程</a>
+                                <a href="business_charge">收费标准</a>
+                            </div>
+                </div>
+                <div class="ft_item prz">
+                    <p class="ft_item_top prz">
+                                    <a href="javascript:;">关于我们</a>
+
+                        <span class="pra ft_item_arrow"></span>
+                    </p>
+                            <div class="ft_list">
+                                <a href="brand_introduction">品牌简介</a>
+                                <a href="news">新闻动态</a>
+                                <a href="about_info">联系我们</a>
+                                <a href="https://hr.aqara.com/#/">加入我们</a>
+                                <a href="envir">环境责任</a>
+                            </div>
+                </div>
+                <div class="ft_item prz">
+                    <p class="ft_item_top prz">
+                                <a href="javascript:;">购买渠道</a>
+
+                        <span class="pra ft_item_arrow"></span>
+                    </p>
+                            <div class="ft_list">
+                                <a href="https://aqara.tmall.com/">天猫旗舰店</a>
+                                <a href="https://mall.jd.com/index-1000093463.html?from=pc">京东自营店</a>
+                                <a href="https://www.xiaomiyoupin.com/search?keyword=Aqara">小米有品</a>
+                                <a href="https://haohuo.jinritemai.com/views/shop/index?id=xzzZkeU&origin_type=604&origin_id=0&new_source_type=47&new_source_id=0&source_type=47&source_id=0">抖音旗舰店</a>
+                                <a href="https://mobile.yangkeduo.com/mall_page.html?mall_id=925216915">拼多多旗舰店</a>
+                                <a href="business_store.html">线下体验店</a>
+                            </div>
+                </div>
+                <div class="ft_item prz">
+                    <p class="ft_item_top prz">
+                                    <a href="javascript:;">视频中心</a>
+
+                        <span class="pra ft_item_arrow"></span>
+                    </p>
+                            <div class="ft_list">
+                                <a href="prod">产品</a>
+                                <a href="brand">品牌</a>
+                                <a href="case">案例</a>
+                                <a href="column">栏目</a>
+                                <a href="vlog">短视频</a>
+                            </div>
+                </div>
+                <div class="ft_item prz">
+                    <p class="ft_item_top prz">
+                                    <a href="javascript:;">Aqara 创新</a>
+
+                        <span class="pra ft_item_arrow"></span>
+                    </p>
+                            <div class="ft_list">
+                                <a href="exclusive#1">Aqara AI</a>
+                                <a href="exclusive#2">小乔</a>
+                                <a href="exclusive#3">无线物联</a>
+                                <a href="exclusive#4">低功耗技术</a>
+                            </div>
+                </div>
+                <div class="ft_item prz">
+                    <p class="ft_item_top prz">
+                                    <a href="javascript:;">行业应用</a>
+
+                        <span class="pra ft_item_arrow"></span>
+                    </p>
+                            <div class="ft_list">
+                                <a href="industry#1">软件产品</a>
+                                <a href="industry#2">解决方案</a>
+                                <a href="industry#3">成功案例</a>
+                                <a href="industry#6">成为工程商</a>
+                            </div>
+                </div>
+
+    </div>
+    <div class="footer_center clearfix">
+        <div class="left">
+            <a href="##" class="footer_logo">
+                <img src="https://aqara-offical-web-1300889962.cos.ap-guangzhou.myqcloud.com/img/footer_logo.png" class="f_l_w"/>
+                <img src="https://aqara-offical-web-1300889962.cos.ap-guangzhou.myqcloud.com/img/footer_logo_w.png" class="f_l_b"/>
+            </a>
+                    <a href="tel:400-990-7930" class="footer_ph fnt_16">客服热线：400-990-7930</a>
+        </div>
+        <div class="right">
+            <ul class="clearfix">
+
+                            <li>
+                                <div class="img wexin"><a href="https://mp.weixin.qq.com/mp/profile_ext?action=home&__biz=MzIyMjY0MDQwMw==&scene=124#wechat_redirect" target="_blank"></a></div>
+                                <div class="ewm"><img src="https://aqara-offical-web-1300889962.cos.ap-guangzhou.myqcloud.com/img/ewm.png" alt="" /></div>
+                            </li>
+
+
+
+                            <li>
+                                <div class="img shipinhao"></div>
+                                <div class="ewm"><img src="https://aqara-offical-web-1300889962.cos.ap-guangzhou.myqcloud.com/img/ewm.png" alt="" /></div>
+                            </li>
+
+
+                            <li>
+                                <div class="img weibo"><a href="https://weibo.com/5861541263?refer_flag=1001030103_" target="_blank"></a></div>
+                                <div class="ewm"><img src="https://aqara-offical-web-1300889962.cos.ap-guangzhou.myqcloud.com/img/ewm.png" alt="" /></div>
+                            </li>
+
+
+                            <li>
+                                <div class="img douyin"><a href="https://www.douyin.com/user/MS4wLjABAAAAolTgHTvrsPY_86S3DW5o8tJaIJprSF1QJCEeM3nq_b8" target="_blank"></a></div>
+                                <div class="ewm"><img src="https://aqara-offical-web-1300889962.cos.ap-guangzhou.myqcloud.com/img/ewm.png" alt="" /></div>
+                            </li>
+
+
+                            <li>
+                                <div class="img bili"><a href="https://space.bilibili.com/434317688?spm_id_from=333.337.0.0" target="_blank"></a></div>
+                                <div class="ewm"><img src="https://aqara-offical-web-1300889962.cos.ap-guangzhou.myqcloud.com/img/ewm.png" alt="" /></div>
+                            </li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer_bottom clearfix">
+            <div class="fl left">Copyright © 2022 Lumi United Technology Co., Ltd. All Rights Reserved.</div>
+        <div class="fr "><a href="##">语言</a><span> | </span><a href="##">简体中文</a></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(function(){
+        $('.wap_footer .footer_center .right li').click(function(e){
+            e.stopPropagation();
+            if($(this).find('.shipinhao').length){
+                if($(this).find('.ewm').hasClass('wf_li')){
+                    $(this).find('.ewm').removeClass('wf_li');
+                }else{
+                    $(this).find('.ewm').addClass('wf_li');
+                }
+            }
+        })
+        $(document).on('click','.touch_body .footer .footer_center .right li',function(e){
+            e.stopPropagation();
+            if($(this).find('.shipinhao').length){
+                if($(this).find('.ewm').hasClass('wf_li')){
+                    $(this).find('.ewm').removeClass('wf_li');
+                }else{
+                    $(this).find('.ewm').addClass('wf_li');
+                }
+            }
+        })
+        $(document).on('click',function(){
+            $('.wap_footer .footer_center .right li').find('.ewm').removeClass('wf_li');
+            $('.touch_body .footer .footer_center .right li').find('.ewm').removeClass('wf_li');
+        })
+    })
+</script>
+
+
+
+
+
+
+
+
+
+                            <script type="text/javascript" src="https://aqara-offical-web-1300889962.cos.ap-guangzhou.myqcloud.com/js/common1.js?v=1.1.3"></script>
+                            <script type="text/javascript" src="https://aqara-offical-web-1300889962.cos.ap-guangzhou.myqcloud.com/js/service.js?v=1.1.3"></script>
+                            <script src="https://aqara-offical-web-1300889962.cos.ap-guangzhou.myqcloud.com/js/rangeslider.min.js"></script>
+                            <script src="https://aqara-offical-web-1300889962.cos.ap-guangzhou.myqcloud.com/js/client.js"></script>
+                            <script src="https://aqara-offical-web-1300889962.cos.ap-guangzhou.myqcloud.com/js/fadeAnim.js"></script>
+                            <script src="https://aqara-offical-web-1300889962.cos.ap-guangzhou.myqcloud.com/js/jweixin-1.0.0.js"></script>
+                            <script src="https://aqara-offical-web-1300889962.cos.ap-guangzhou.myqcloud.com/js/project.js"></script>
+                            <script type="text/javascript"
+                                    src="https://cdn.aqara.com/cdn/website/static/lodash-4.17.15/swiper.min.3.4.2.js"></script>
+                            <script type="text/javascript" src="https://aqara-offical-web-1300889962.cos.ap-guangzhou.myqcloud.com/js/method.js"></script>
+
+
+                <script>
+                    $(function () {
+                        searchTop();
+                        searchTopApp();
+                        var leng = $(".section-swiper .swiper-slide").length;
+                        if (leng > 1) {
+                            var bslider = new Swiper('.section-swiper', {
+                                //mode: 'vertical',
+                                autoplay: 4500,
+                                loop: true,
+                                calculateHeight: true,
+                                grabCursor: false,
+                                pagination: '.swiper-pagination',
+                                paginationClickable: true
+                            });
+                            $(".section-swiper").hover(function () {
+                                bslider.stopAutoplay();
+                            }, function () {
+                                bslider.startAutoplay();
+                            });
+
+                        }
+                        ;
+                        var bslider = new Swiper('#cx-heig', {
+                            //mode: 'vertical',
+                            autoplay: 4500,
+                            speed: 800,
+                            loop: false,
+                            calculateHeight: true,
+                            grabCursor: false,
+                            pagination: '.swiper-pagination',
+                            paginationClickable: true
+                        });
+                        $(".section-swiper").hover(function () {
+                            // bslider.stopAutoplay();
+                        }, function () {
+                            // bslider.startAutoplay();
+                        });
+                        $(".vid-player").click(function () {
+                            var vsrc = $(this).attr("data-vid-src");
+                            var vid = $("#video-pop .v-video");
+                            $("#video-pop #title").text($(this).attr("data-name"));
+                            if (vsrc.length > 4) {
+                                if (vid.attr("src") != vsrc) {
+                                    vid.attr("src", vsrc);
+                                    vid.on("loadedmetadata", function () {
+                                        vid.get(0).play();
+                                    })
+                                }
+                                ;
+                            }
+                            ;
+                            $("#video-pop").addClass("video-play-show");
+                            $("#video-pop .video-curtain").removeClass("video-out").addClass("video-in");
+                        });
+                        $("#video-pop .close-pop").click(function () {
+                            var vid = $("#video-pop .v-video");
+                            vid.attr("src", "");
+                            $("#video-pop .video-curtain").removeClass("video-in").addClass("video-out");
+                            $("#video-pop").removeClass("video-play-show");
+                        })
+                        var leng = $(".pd_one .swiper-slide").length;
+                        if (leng > 1) {
+                            var bslider = new Swiper('.pd_one', {
+                                //mode: 'vertical',
+                                autoplay: 5000,
+                                loop: true,
+                                calculateHeight: true,
+                                grabCursor: false,
+                                pagination: '.swiper-pagination',
+                                paginationClickable: true
+                            });
+                            $(".section-swiper").hover(function () {
+                                bslider.stopAutoplay();
+                            }, function () {
+                                bslider.startAutoplay();
+                            });
+
+                        }
+                        ;
+
+                        $(".carousel").each(function () {
+                            var that = $(this);
+                            var runBox = $(".owl-carousel", that)
+                            var leng = $(".owl-carousel .items", that).length;
+                            if (leng > 3) {
+                                runBox.owlCarousel({
+                                    items: 3,
+                                    pagination: false
+                                });
+                            }
+                            ;
+                        });
+
+                        $(".vd-button, .vid-btn").on("click", function () {
+                            var src = $(this).attr("data-src");
+                            $(".video-vplayer").show();
+                            $(".video-vplayer").find("video").attr("src", src);
+                            $(".video-vplayer").find("video").get(0).play();
+                        });
+
+                        $(".video-vplayer").find(".video-close").on("click", function () {
+                            $(".video-vplayer").find("video").attr("src", "");
+                            $(".video-vplayer").hide();
+                        });
+
+                        $(".video-paly-btn").on("click", function () {
+                            var src = $(this).attr("data-src");
+                            $(this).hide();
+                            $(".vd-main-show").show();
+                            $(".vd-main-show").find("video").attr("src", src);
+                            $(".vd-main-show").find("video").get(0).play();
+                        });
+                        //视频
+                        $('.play').click(function () {
+                            $(this).hide()
+                            $(this).parent().find('.video_image').hide();
+                            $(this).parent().find('video').get(0).play()
+                            $(this).parent().find('video').get(0).controls = true
+                        })
+
+
+                        //轮播图
+                        $('.indban').each(function (inn, ele) {
+                            con_swp = $(ele).find('.swiper-container');
+                            if ($(ele).find('.swiper-slide').length > 1) {
+                                new Swiper(con_swp, {
+                                    loop: true, // 循环模式选项
+                                    autoplay: {
+                                        delay: 4000, //1秒切换一次
+                                        disableOnInteraction: false,
+                                    },
+                                    speed: 1000,
+
+                                    // 如果需要分页器
+                                    pagination: {
+                                        el: $(ele).find('.swiper-pagination'),
+                                        clickable: true,
+                                        type: 'custom',
+                                        renderCustom: function (swiper, current, total) {
+                                            var customPaginationHtml = "";
+                                            for (var i = 0; i < total; i++) {
+                                                //判断哪个分页器此刻应该被激活
+                                                if (i == (current - 1)) {
+                                                    customPaginationHtml += '<span class="swiper-pagination-customs swiper-pagination-customs-active"><div class="wapper"><div class="rect right"><div class="circle circle_right"></div></div><div class="rect left"><div class="circle circle_left"></div></div> </div></span>';
+                                                } else {
+                                                    customPaginationHtml += '<span class="swiper-pagination-customs"></span>';
+                                                }
+                                            }
+                                            return customPaginationHtml;
+                                        }
+                                    },
+                                    navigation: {
+                                        nextEl: $(ele).find('#indban_next'),
+                                        prevEl: $(ele).find('#indban_prev'),
+                                    }
+                                })
+                            } else {
+                                $(ele).addClass('no_swip')
+                            }
+
+                        })
+
+
+                        //常见问题
+                        $(".tech_faq").find("li").each(function (index) {
+                            $(this).on("click", function () {
+                                $(this).addClass("open").siblings("li").removeClass("open");
+                                $(this).find(".tech_faq_answer").stop().slideDown().end().siblings("li").find(".tech_faq_answer").stop().slideUp()
+                            });
+                            if (index == 0) {
+                                $(this).addClass("open");
+                                $(this).find(".tech_faq_answer").show()
+                            }
+                        });
+                    })
+                </script>
+</body>
+
+</html>

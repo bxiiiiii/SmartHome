@@ -207,20 +207,6 @@
     border-bottom: solid;
 }
 
-.table {
-    margin-top: 30px;
-    margin-left: 25px;
-}
-
-.td {
-    width: 200px;
-    height: 100px;
-    /* font-size: 10px; */
-    font-weight: bold;
-
-    border-radius: 20px 30px;
-}
-
 .choice1 {
     margin-top: 20px;
     margin-left: 20px;
@@ -231,4 +217,35 @@
     border-radius: 30px;
     color: #000000;
     width: 150px;
+}
+
+body {
+    font-family: "PT Sans", sans-serif;
+    background: #fff6d9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    margin: 2.75rem 0 1.05rem;
+    line-height: 1.2;
+    font-family: "Jost", sans-serif;
+}
+
+h1 {
+    margin-top: 0;
+    font-size: 3.052em;
+}
+
+h2 {
+    font-size: 1em;
+}
+
+p {
+    line-height: 1.3;
 }
